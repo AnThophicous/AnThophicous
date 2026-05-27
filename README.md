@@ -127,10 +127,6 @@ Mas acima de qualquer empresa, meu maior objetivo é construir coisas incríveis
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=AnThophicous&show_icons=true&theme=chartreuse-dark&hide_border=true" />
-  
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnThophicous&layout=compact&theme=chartreuse-dark&hide_border=true" />
-</p>
 
 <p align="center">
   <img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AnThophicous&theme=github_dark" />
