@@ -127,15 +127,25 @@ Mas acima de qualquer empresa, meu maior objetivo é construir coisas incríveis
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=AnThophicous&show_icons=true&theme=merko&hide_border=true&title_color=F7DF1E&icon_color=F7DF1E&text_color=FFFFFF&bg_color=0D1117" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=AnThophicous&show_icons=true&theme=chartreuse-dark&hide_border=true" />
+  
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnThophicous&layout=compact&theme=chartreuse-dark&hide_border=true" />
 </p>
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnThophicous&layout=compact&theme=merko&hide_border=true&title_color=F7DF1E&text_color=FFFFFF&bg_color=0D1117" />
+  <img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AnThophicous&theme=github_dark" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AnThophicous&theme=github_dark" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AnThophicous&theme=github_dark" />
+  
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnThophicous&theme=github_dark" />
+</p>
+
+<p align="center">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnThophicous&theme=github_dark" />
+  
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AnThophicous&theme=github_dark&utcOffset=-3" />
 </p>
 
 ---
