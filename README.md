@@ -28,6 +28,14 @@
 >
 > Hoje atuo mais no **Front-end**, mas estou expandindo pra **Backend com TypeScript**, desenvolvimento de sistemas e **Cyber Security**.
 
+<p align="center"><b><i>☕ Desenvolvedor que não gosta de café é apenas um garoto perdido.</i></b></p>
+
+| | |
+|---|---|
+| 🎵 **Música favorita** | Construção — Chico Buarque |
+| 🕗 **Horário preferido para codar** | 19:50 |
+| 🖤 **Preza por** | Melancolia Extrema, Paz Interna, Vibe, Amigos, Pessoas e Código |
+
 <p align="center"><img src="assets/wires.svg" width="100%" /></p>
 
 ## `LAYER:07` — SOCIETY
