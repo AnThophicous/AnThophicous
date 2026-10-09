@@ -142,63 +142,62 @@ def header():
 
 # ──────────────────────────────────────────────────── criação de adão ──
 def creation():
-    W, H = 900, 360
+    """A Criação de Adão: Deus (PID 1) e Adão (fork) quase se tocam. Só os braços se mexem."""
+    W, H = 900, 500
     art = open(os.path.join(HERE, 'adam.txt'), encoding='utf-8').read().rstrip('\n').split('\n')
-    cols = max(map(len, art))
-    art = [l.ljust(cols) for l in art]
-    SPLIT = 110  # coluna do vão entre os dedos
-    cw, lh = 4.75, 8.4
-    x0 = (W - cols * cw) / 2
-    y0 = 120
-    adam = lines_svg([l[:SPLIT] for l in art], x0, y0, cw, lh)
-    god = lines_svg([l[SPLIT:] for l in art], x0 + SPLIT * cw, y0, cw, lh)
-    gapx = x0 + (SPLIT - 1) * cw
-    gapy = y0 + 7 * lh
-    css = '''
-.bg{fill:#07070b}
-.art text{font-size:8.6px;font-weight:700}
-.adam{fill:url(#skinA);animation:adam 7s ease-in-out infinite}
-.god{fill:url(#skinG);animation:god 7s ease-in-out infinite}
-@keyframes adam{0%,100%{transform:translateX(0)}50%{transform:translateX(7px)}}
-@keyframes god{0%,100%{transform:translateX(0)}50%{transform:translateX(-8px)}}
-.spark{animation:spark 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-@keyframes spark{0%,30%,70%,100%{opacity:.08;transform:scale(.4)}50%{opacity:1;transform:scale(1.25)}}
-.star{fill:#fff;animation:tw 6s ease-in-out infinite}
-@keyframes tw{0%,100%{opacity:.08}50%{opacity:.7}}
-.t1{fill:#efe6d8;font-size:20px;letter-spacing:9px}
-.t2{fill:#7d7a74;font-size:11px;letter-spacing:3px}
-.t3{fill:#cfc6b8;font-size:13px;font-style:italic}
-.t4{fill:#5f5c58;font-size:11px}
-.red{fill:#ff2e4d}
-.bit{fill:#ffcf8a;font-size:9px;opacity:0;animation:flow 4.2s linear infinite}
-@keyframes flow{0%{opacity:0;transform:translate(0,0)}12%{opacity:.9}85%{opacity:.9}100%{opacity:0;transform:translate(-300px,-14px)}}
-.sweep{animation:sweep 8s linear infinite}
-@keyframes sweep{from{transform:translateY(0)}to{transform:translateY(440px)}}
+    SPLIT, GAP = 128, 8                      # coluna do vão / colunas extras pra deixar o vão visível
+    adam_l = [l[:SPLIT] for l in art]
+    god_l = [l[SPLIT:] for l in art]
+    cols = SPLIT + GAP + max(map(len, god_l))
+    cw, lh = 860 / cols, 8.8
+    x0, y0 = 20, 168
+    fs = cw * 1.68
+    gx = x0 + (SPLIT + GAP) * cw
+    adam = lines_svg(adam_l, x0, y0, cw, lh)
+    god = lines_svg(god_l, gx, y0, cw, lh)
+    css = f'''
+.bg{{fill:#06060a}}
+.art text{{font-size:{fs:.2f}px;font-weight:700}}
+.adam{{fill:url(#red);animation:adam 6s ease-in-out infinite}}
+.god{{fill:url(#white);animation:god 6s ease-in-out infinite}}
+@keyframes adam{{0%,100%{{transform:translateY(0)}}50%{{transform:translateY(-6px)}}}}
+@keyframes god{{0%,100%{{transform:translateY(-6px)}}50%{{transform:translateY(0)}}}}
+.star{{fill:#fff;opacity:.25}}
+.t1{{fill:#efe6e8;font-size:22px;letter-spacing:10px}}
+.t2{{fill:#7a7074;font-size:11px;letter-spacing:3px}}
+.lbl{{font-size:11px;letter-spacing:2px}}
+.lg{{fill:#ffffff}} .la{{fill:#ff2e4d}} .pid{{fill:#6f666a;font-size:10px;letter-spacing:1px}}
+.tick{{stroke:#3a2a2e;stroke-width:1}}
+.q{{fill:#e6dcdf;font-size:14px;font-style:italic}}
+.cmd{{fill:#8b8285;font-size:12px}} .tree{{fill:#d8d0d2;font-size:13px}}
+.red{{fill:#ff2e4d}}
+.wired{{fill:#ff2e4d;font-size:12px;letter-spacing:2px}}
 '''
-    bits = []
-    for i in range(14):
-        bx = random.uniform(gapx + 320, gapx + 380)
-        by = random.uniform(gapy - 26, gapy + 6)
-        bits.append(f'<text x="{bx:.0f}" y="{by:.0f}" class="bit" style="animation-delay:-{i * .3:.1f}s">'
-                    f'{random.choice("01")}</text>')
-    body = f'''<defs>
-<linearGradient id="skinA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a88466"/><stop offset=".7" stop-color="#f0d2b4"/><stop offset="1" stop-color="#fff3e2"/></linearGradient>
-<linearGradient id="skinG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff6ea"/><stop offset=".5" stop-color="#f3d7bb"/><stop offset="1" stop-color="#b08a6c"/></linearGradient>
-<radialGradient id="glow"><stop offset="0" stop-color="#fff2d2" stop-opacity=".95"/><stop offset=".25" stop-color="#ffcf8a" stop-opacity=".55"/><stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/></radialGradient>
-<radialGradient id="halo" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#3a2a18" stop-opacity=".55"/><stop offset="1" stop-color="#07070b" stop-opacity="0"/></radialGradient>
-{SWEEP}</defs>
+    defs = '''<defs>
+<linearGradient id="red" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7a0f1f"/><stop offset=".6" stop-color="#ff2e4d"/><stop offset="1" stop-color="#ff8a9c"/></linearGradient>
+<linearGradient id="white" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#ffd6de"/><stop offset="1" stop-color="#c98a96"/></linearGradient>
+<radialGradient id="glowR" cx=".5" cy=".42" r=".6"><stop offset="0" stop-color="#4a0b16" stop-opacity=".7"/><stop offset="1" stop-color="#06060a" stop-opacity="0"/></radialGradient>
+</defs>'''
+    labels = (f'<line class="tick" x1="{x0 + 70 * cw:.0f}" y1="132" x2="{x0 + 70 * cw:.0f}" y2="150"/>'
+              f'<text x="{x0 + 70 * cw:.0f}" y="112" class="lbl la" text-anchor="middle">ADÃO</text>'
+              f'<text x="{x0 + 70 * cw:.0f}" y="126" class="pid" text-anchor="middle">pid 2 · fork()</text>'
+              f'<line class="tick" x1="{gx + 40 * cw:.0f}" y1="132" x2="{gx + 40 * cw:.0f}" y2="150"/>'
+              f'<text x="{gx + 40 * cw:.0f}" y="112" class="lbl lg" text-anchor="middle">DEUS</text>'
+              f'<text x="{gx + 40 * cw:.0f}" y="126" class="pid" text-anchor="middle">pid 1 · /sbin/init</text>')
+    by = y0 + len(art) * lh + 34
+    body = f'''{defs}
 <rect class="bg" width="{W}" height="{H}" rx="14"/>
-<rect width="{W}" height="{H}" fill="url(#halo)" rx="14"/>
-{stars(W, H, 90, avoid=lambda x, y: 105 < y < 280)}
-<text x="{W / 2}" y="44" class="t1" text-anchor="middle">A CRIAÇÃO DE ADÃO</text>
-<text x="{W / 2}" y="66" class="t2" text-anchor="middle">MICHELANGELO · CAPELA SISTINA · c.1512 · <tspan class="red">LAYER:04 RELIGION</tspan></text>
+<rect width="{W}" height="{H}" fill="url(#glowR)" rx="14"/>
+{stars(W, H, 110, avoid=lambda x, y: 95 < y < by + 110)}
+<text x="{W / 2}" y="46" class="t1" text-anchor="middle">A CRIAÇÃO DE ADÃO</text>
+<text x="{W / 2}" y="70" class="t2" text-anchor="middle">MICHELANGELO · CAPELA SISTINA · c.1512 · <tspan class="red">LAYER:04 RELIGION</tspan></text>
+{labels}
 <g class="art"><g class="adam">{adam}</g><g class="god">{god}</g></g>
-{''.join(bits)}
-<circle class="spark" cx="{gapx + 2:.1f}" cy="{gapy:.1f}" r="22" fill="url(#glow)"/>
-<text x="{W / 2}" y="{H - 52}" class="t3" text-anchor="middle">“quase se tocam — e é nesse espaço que tudo é criado.”</text>
-<text x="{W / 2}" y="{H - 26}" class="t4" text-anchor="middle">$ ping adam  →  64 bytes from adam: icmp_seq=1 ttl=∞ time=0.0001 ms  <tspan class="red">(distância: nunca zero)</tspan></text>
-{scanlines(W, H)}'''
-    write('creation.svg', svg(W, H, body, css, 'A Criação de Adão em ASCII — as mãos quase se tocam'))
+<text x="{W / 2}" y="{by}" class="q" text-anchor="middle">“quase se tocam — e é nesse espaço que tudo é criado.”</text>
+<text x="{W / 2}" y="{by + 30}" class="cmd" text-anchor="middle">$ pstree -p</text>
+<text x="{W / 2}" y="{by + 50}" class="tree" text-anchor="middle"><tspan class="lg">deus(1)</tspan>───<tspan class="la">adão(2)</tspan>───humanidade(∞)───<tspan class="red">você</tspan></text>
+<text x="{W / 2}" y="{by + 84}" class="wired" text-anchor="middle">gênesis 1:27 · e se deus estiver na wired?</text>'''
+    write('creation.svg', svg(W, H, body, css, 'A Criação de Adão em ASCII — Deus (pid 1) e Adão (fork) quase se tocam'))
 
 
 # ─────────────────────────────────────────────────────────── neofetch ──
