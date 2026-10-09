@@ -21,7 +21,7 @@
 ## `LAYER:01` — WEIRD
 
 <p align="center">
-  <img src="assets/neofetch.svg" width="100%" alt="neofetch: anthophicous@wired" />
+  <img src="assets/neofetch-tux.svg" width="100%" alt="neofetch: anthophicous@wired" />
 </p>
 
 > Opa! Eu sou o **AnThophicous** 👋 — um desenvolvedor brasileiro de **16 anos**, apaixonado por tecnologia, programação e Inteligência Artificial.

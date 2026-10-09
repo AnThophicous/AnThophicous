@@ -313,7 +313,7 @@ def neofetch():
 @keyframes lid{0%,92%,100%{opacity:0}93%,95%{opacity:1}}
 .tux{animation:bob 3s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-.info text{font-size:14px;opacity:0;animation:in .35s ease-out forwards}
+.info text{font-size:14px;animation:in .35s ease-out backwards}
 @keyframes in{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
 .k{fill:#ff2e4d;font-weight:700}
 .v{fill:#d8d8e6}
@@ -337,7 +337,7 @@ def neofetch():
 {blocks}
 <text x="24" y="{H - 18}" class="p"><tspan class="ps">❯</tspan> <tspan class="blink">█</tspan></text>
 {scanlines(W, H)}'''
-    write('neofetch.svg', svg(W, H, body, css, 'neofetch — anthophicous@wired, 16 anos'))
+    write('neofetch-tux.svg', svg(W, H, body, css, 'neofetch — anthophicous@wired, 16 anos'))
 
 
 # ───────────────────────────────────────────── divisor: postes e fios ──
