@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <img src="assets/designer.gif" width="100%" alt="Mid-Level · Fullstack — Website Designer" />
+</p>
+
+<p align="center">
   <a href="https://github.com/AnThophicous">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&pause=1200&color=FF2E4D&center=true&vCenter=true&width=640&lines=present+day.+present+time.+hahahaha;sudo+apt+install+futuro;16+anos+%C2%B7+dev+brasileiro+%C2%B7+conectado+%C3%A0+wired;eu+n%C3%A3o+quero+s%C3%B3+estudar+programa%C3%A7%C3%A3o.;eu+quero+construir+coisas+que+impactem+pessoas." alt="typing" />
   </a>
