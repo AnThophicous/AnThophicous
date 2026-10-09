@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="150" viewBox="0 0 900 150" role="img" aria-label="close the world, open the next">
+<title>close the world, open the next</title>
+<style>
+text { font-family: 'JetBrains Mono','Fira Code','DejaVu Sans Mono',Menlo,Consolas,'Courier New',monospace; white-space: pre; }
+
+.bg{fill:#07070b}
+.a,.b{font-size:30px;letter-spacing:6px;fill:#e6e6f0;font-weight:700}
+.a{animation:fa 6s infinite steps(1)}
+.b{animation:fb 6s infinite steps(1);fill:#ff2e4d}
+@keyframes fa{0%,45%{opacity:1}46%{opacity:0}47%{opacity:1}50%,100%{opacity:0}}
+@keyframes fb{0%,49%{opacity:0}50%,95%{opacity:1}96%{opacity:0}97%{opacity:1}100%{opacity:0}}
+.s{fill:#5c5c6e;font-size:12px;letter-spacing:2px}
+.red{fill:#ff2e4d}
+.sweep{animation:sweep 5s linear infinite}
+@keyframes sweep{from{transform:translateY(0)}to{transform:translateY(220px)}}
+
+</style>
+<defs><linearGradient id="sweepg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".85" stop-color="#fff" stop-opacity=".05"/>
+<stop offset="1" stop-color="#fff" stop-opacity=".12"/></linearGradient></defs>
+<rect class="bg" width="900" height="150" rx="14"/>
+<text x="450.0" y="70" class="a" text-anchor="middle">CLOSE THE WORLD, OPEN THE NEXT</text>
+<text x="450.0" y="70" class="b" text-anchor="middle">.TXEN EHT NEPO ,DLROW EHT ESOLC</text>
+<text x="450.0" y="108" class="s" text-anchor="middle">let's all love lain · <tspan class="red">present day, present time</tspan></text>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".28"/></pattern><rect width="900" height="150" fill="url(#scan)" pointer-events="none"/><rect class="sweep" x="0" y="-60" width="900" height="60" fill="url(#sweepg)"/>
+</svg>

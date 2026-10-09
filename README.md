@@ -1,132 +1,158 @@
-# Opa! Eu sou o AnThophicous 👋
-
-Sou um desenvolvedor brasileiro de 15 anos, apaixonado por tecnologia, programação e Inteligência Artificial.
-
-Atualmente atuo mais no **Front-end**, mas estou expandindo meus conhecimentos para **Backend com TypeScript**, desenvolvimento de sistemas e **Cyber Security**.
-
-Meu objetivo é evoluir cada vez mais como desenvolvedor, criar projetos reais e, futuramente, trabalhar em grandes empresas de tecnologia como **Google, Microsoft, OpenAI, Anthropic** e outras Big Techs do Vale do Silício.
-
----
-
-## 🚀 Minha História
-
-Provavelmente você chegou aqui pelos meus projetos… ou talvez queira me conhecer melhor.
-
-Então deixa eu te contar um pouco da minha jornada.
-
-Tudo começou quando eu tinha cerca de **10 anos**. Naquela época, eu gostava muito de jogos de navegador, principalmente os famosos jogos `.io`, como **MooMoo.io**, **Zombs.io** e outros.
-
-Eu ficava fascinado tentando entender como aqueles jogos funcionavam. Mesmo sem saber programar direito, eu já tinha aquela curiosidade de querer criar algo parecido.
-
-Com **12 anos**, acabei me afastando um pouco da programação. Mas aos **13 anos**, decidi voltar de verdade e estudar mais a fundo.
-
-Foi aí que comecei a aprender sobre:
-
-- HTML
-- CSS
-- JavaScript
-- TypeScript
-- Servidores
-- Backend
-- APIs
-- Sistemas
-
-Nessa mesma fase, uma coisa mudou completamente minha visão sobre tecnologia:  
-as **Inteligências Artificiais**.
-
-Quando conheci melhor o mundo da IA, principalmente com a evolução dos modelos como o GPT-4o, eu fiquei completamente fascinado.
-
-Naquele momento, percebi que eu tinha duas grandes paixões:
-
-- Programação
-- Inteligência Artificial
-
-E desde então comecei a estudar, testar ferramentas, criar projetos e entender cada vez mais sobre esse universo.
-
-Também estudei um pouco sobre **Engenharia de Prompt**, incluindo o método **TIC**:
-
-- Task
-- Instructions
-- Context
-
-Esse método me ajudou bastante a pensar melhor, organizar ideias e criar prompts mais eficientes.
-
----
-
-## 💻 Minha Evolução Como Desenvolvedor
-
-Eu nunca gostei de apenas assistir aulas e guardar conhecimento.
-
-Eu gosto de aplicar.
-
-Por isso, comecei a criar projetos reais, testar ideias, quebrar a cabeça, errar, corrigir e aprender na prática.
-
-Hoje estudo e desenvolvo projetos usando tecnologias como:
-
-- JavaScript
-- TypeScript
-- Node.js
-- C++
-- C#
-
-E futuramente quero me aprofundar bastante em:
-
-- Rust
-- Backend avançado
-- Sistemas
-- Cyber Security
-- Inteligência Artificial
-- Arquitetura de software
-
-Mesmo ainda não tendo experiência profissional em empresas, considero que estou construindo uma base forte através de estudo, prática e projetos próprios.
-
-Ainda estou no começo da minha carreira, mas tenho muita vontade de evoluir e me tornar um desenvolvedor cada vez melhor.
-
----
-
-## 🧠 Um Pouco Além da Programação
-
-Além da parte técnica, também venho aprendendo bastante sobre maturidade, disciplina e crescimento pessoal.
-
-Passei por experiências que me fizeram refletir mais sobre foco, respeito, espaço pessoal e evolução como pessoa.
-
-Depois disso, decidi voltar ainda mais forte para a programação, usando tudo como motivação para estudar, criar e melhorar.
-
-Meu foco hoje é simples:
-
-**aprender, construir e evoluir.**
-
----
-
-## 🎯 Meus Objetivos
-
-Algumas empresas em que sonho trabalhar futuramente:
-
-- Google
-- Microsoft
-- OpenAI
-- Anthropic
-- Outras Big Techs do Vale do Silício
-
-Mas acima de qualquer empresa, meu maior objetivo é construir coisas incríveis, aprender continuamente e deixar minha marca no mundo da tecnologia.
-
----
-
-## 🛠️ Tecnologias
-
-![HTML](https://img.shields.io/badge/HTML5-F7DF1E?style=for-the-badge&logo=html5&logoColor=000000)
-![CSS](https://img.shields.io/badge/CSS3-3DDC84?style=for-the-badge&logo=css3&logoColor=000000)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000000)
-![TypeScript](https://img.shields.io/badge/TypeScript-3DDC84?style=for-the-badge&logo=typescript&logoColor=000000)
-![Node.js](https://img.shields.io/badge/Node.js-0B6623?style=for-the-badge&logo=nodedotjs&logoColor=ffffff)
-![C++](https://img.shields.io/badge/C++-F7DF1E?style=for-the-badge&logo=cplusplus&logoColor=000000)
-![C#](https://img.shields.io/badge/C%23-3DDC84?style=for-the-badge&logo=csharp&logoColor=000000)
-
----
-
-## 📊 GitHub Analytics
+<p align="center">
+  <img src="assets/header.svg" width="100%" alt="AnThophicous — present day, present time" />
+</p>
 
 <p align="center">
+  <a href="https://github.com/AnThophicous">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&pause=1200&color=FF2E4D&center=true&vCenter=true&width=640&lines=present+day.+present+time.+hahahaha;sudo+apt+install+futuro;16+anos+%C2%B7+dev+brasileiro+%C2%B7+conectado+%C3%A0+wired;eu+n%C3%A3o+quero+s%C3%B3+estudar+programa%C3%A7%C3%A3o.;eu+quero+construir+coisas+que+impactem+pessoas." alt="typing" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/idade-16-ff2e4d?style=flat-square&labelColor=0b0b10" />
+  <img src="https://img.shields.io/badge/local-Brasil-ff2e4d?style=flat-square&labelColor=0b0b10" />
+  <img src="https://img.shields.io/badge/status-connected_to_the_wired-ff2e4d?style=flat-square&labelColor=0b0b10" />
+  <img src="https://img.shields.io/badge/os-linux-ff2e4d?style=flat-square&logo=linux&logoColor=white&labelColor=0b0b10" />
+  <img src="https://komarev.com/ghpvc/?username=AnThophicous&color=ff2e4d&style=flat-square&label=pessoas+conectadas" />
+</p>
+
+<p align="center"><img src="assets/wires.svg" width="100%" /></p>
+
+## `LAYER:01` — WEIRD
+
+<p align="center">
+  <img src="assets/neofetch.svg" width="100%" alt="neofetch: anthophicous@wired" />
+</p>
+
+> Opa! Eu sou o **AnThophicous** 👋 — um desenvolvedor brasileiro de **16 anos**, apaixonado por tecnologia, programação e Inteligência Artificial.
+>
+> Hoje atuo mais no **Front-end**, mas estou expandindo pra **Backend com TypeScript**, desenvolvimento de sistemas e **Cyber Security**.
+
+<p align="center"><img src="assets/wires.svg" width="100%" /></p>
+
+## `LAYER:07` — SOCIETY
+
+<table>
+<tr>
+<td width="50%" align="center">
+  <img src="assets/lain.gif" width="100%" alt="Lain Iwakura em 1-bit com dithering" />
+  <br/>
+  <sub><a href="assets/lain.mp4">▶ assistir em mp4 (5s)</a> · <a href="assets/lain.png">png sem fundo</a></sub>
+</td>
+<td width="50%">
+
+```text
+   ┌────────────────────────────────────┐
+   │  SERIAL EXPERIMENTS LAIN  (1998)   │
+   └────────────────────────────────────┘
+
+   > present day.
+   > present time.
+   > HAHAHAHAHA
+
+   "no matter where you go,
+    everyone's connected."
+
+   o mundo real e a Wired
+   não são tão separados
+   quanto parecem.
+
+   é por isso que eu programo.
+```
+
+<sub><code>lain_dither.py</code> → dithering Atkinson 1-bit · luz em movimento · sombra projetada · glitch · desligamento de CRT</sub>
+
+</td>
+</tr>
+</table>
+
+<p align="center"><img src="assets/wires.svg" width="100%" /></p>
+
+## `LAYER:03` — PSYCHE
+
+<details>
+<summary><code>$ cat ~/minha_historia.txt</code> &nbsp;<sub>(clica pra abrir)</sub></summary>
+<br/>
+
+Provavelmente você chegou aqui pelos meus projetos… ou talvez queira me conhecer melhor. Então deixa eu te contar.
+
+```diff
+@@ ~10 anos @@
++ jogos de navegador: MooMoo.io, Zombs.io e outros .io
++ ficava fascinado tentando entender como aqueles jogos funcionavam
++ mesmo sem saber programar direito, já queria criar algo parecido
+
+@@ 12 anos @@
+- me afastei um pouco da programação
+
+@@ 13 anos @@
++ voltei de verdade: HTML, CSS, JavaScript, TypeScript
++ servidores, backend, APIs e sistemas
++ conheci a fundo as Inteligências Artificiais (GPT-4o mudou tudo)
+
+@@ hoje — 16 anos @@
++ duas paixões: programação + inteligência artificial
++ projetos reais, errar, corrigir e aprender na prática
+```
+
+Também estudei **Engenharia de Prompt**, incluindo o método **T.I.C.**:
+
+| `T` | `I` | `C` |
+|:---:|:---:|:---:|
+| **Task** | **Instructions** | **Context** |
+
+Esse método me ajudou a pensar melhor, organizar ideias e criar prompts mais eficientes.
+
+Eu nunca gostei de apenas assistir aulas e guardar conhecimento. **Eu gosto de aplicar.** Mesmo ainda sem experiência profissional em empresas, estou construindo uma base forte com estudo, prática e projetos próprios.
+
+Além da parte técnica, venho aprendendo bastante sobre maturidade, disciplina e crescimento pessoal — foco, respeito, espaço pessoal e evolução como pessoa. Usei tudo isso como motivação pra voltar ainda mais forte.
+
+</details>
+
+<p align="center"><img src="assets/wires.svg" width="100%" /></p>
+
+## `LAYER:04` — RELIGION
+
+<p align="center">
+  <img src="assets/creation.svg" width="100%" alt="A Criação de Adão em ASCII: as mãos de Deus e de Adão quase se tocando" />
+</p>
+
+<p align="center"><sub>a obra de Michelangelo convertida em ASCII a partir do próprio afresco · os dedos se aproximam, mas nunca se tocam</sub></p>
+
+<p align="center"><img src="assets/wires.svg" width="100%" /></p>
+
+## `LAYER:09` — PROTOCOL
+
+```console
+anthophicous@wired:~$ apt list --installed
+```
+
+<p>
+  <img src="https://img.shields.io/badge/HTML5-0b0b10?style=for-the-badge&logo=html5&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/CSS3-0b0b10?style=for-the-badge&logo=css3&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/JavaScript-0b0b10?style=for-the-badge&logo=javascript&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/TypeScript-0b0b10?style=for-the-badge&logo=typescript&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/Node.js-0b0b10?style=for-the-badge&logo=nodedotjs&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/C++-0b0b10?style=for-the-badge&logo=cplusplus&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/C%23-0b0b10?style=for-the-badge&logo=csharp&logoColor=ff2e4d" />
+</p>
+
+```console
+anthophicous@wired:~$ apt install --future
+```
+
+<p>
+  <img src="https://img.shields.io/badge/Rust-installing...-1d1d27?style=for-the-badge&logo=rust&logoColor=white" />
+  <img src="https://img.shields.io/badge/Backend_avançado-installing...-1d1d27?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cyber_Security-installing...-1d1d27?style=for-the-badge&logo=kalilinux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-installing...-1d1d27?style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/IA-installing...-1d1d27?style=for-the-badge&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/Arquitetura_de_software-installing...-1d1d27?style=for-the-badge&logoColor=white" />
+</p>
+
+<p align="center"><img src="assets/wires.svg" width="100%" /></p>
+
+## `LAYER:11` — INFORNOGRAPHY
 
 <p align="center">
   <img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AnThophicous&theme=github_dark" />
@@ -134,32 +160,74 @@ Mas acima de qualquer empresa, meu maior objetivo é construir coisas incríveis
 
 <p align="center">
   <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AnThophicous&theme=github_dark" />
-  
   <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnThophicous&theme=github_dark" />
 </p>
 
 <p align="center">
   <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnThophicous&theme=github_dark" />
-  
   <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AnThophicous&theme=github_dark&utcOffset=-3" />
 </p>
 
----
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AnThophicous/AnThophicous/output/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AnThophicous/AnThophicous/output/snake-light.svg" />
+    <img alt="cobrinha comendo minhas contribuições" src="https://raw.githubusercontent.com/AnThophicous/AnThophicous/output/snake-dark.svg" />
+  </picture>
+</p>
 
-## 📌 Curiosidades
+<p align="center"><img src="assets/wires.svg" width="100%" /></p>
 
-- 🇧🇷 Brasileiro
+## `LAYER:13` — EGO
+
+```console
+anthophicous@wired:~$ cat /etc/objetivos
+```
+
+| | |
+|---|---|
+| 🎯 **onde quero chegar** | Google · Microsoft · OpenAI · Anthropic · Big Techs do Vale do Silício |
+| 🧠 **o que importa mais** | construir coisas incríveis, aprender sempre e deixar minha marca na tecnologia |
+| ⚡ **foco de hoje** | **aprender, construir e evoluir.** |
+
+<details>
+<summary><code>$ cat ~/curiosidades</code></summary>
+<br/>
+
+- 🇧🇷 Brasileiro, 16 anos
 - 💻 Desenvolvedor Front-end
 - 🚀 Aprendendo Backend com TypeScript
 - 🤖 Apaixonado por Inteligência Artificial
 - 🔒 Interessado em Cyber Security
+- 🐧 Fã de Linux e de Serial Experiments Lain
 - 📚 Sempre estudando e criando projetos
 - 🗣️ Consigo conversar um pouco em inglês
 - ⚡ Gosto de transformar ideias em projetos reais
 
----
+</details>
 
-## 💭 Frase
+```console
+anthophicous@wired:~$ fortune | cowsay -f tux
+```
 
-> “Eu não quero apenas estudar programação.  
-> Eu quero construir coisas que realmente impactem pessoas.”
+```text
+ _________________________________________________
+/ Eu não quero apenas estudar programação.        \
+\ Eu quero construir coisas que impactem pessoas. /
+ -------------------------------------------------
+   \
+    \
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+```
+
+<p align="center">
+  <img src="assets/footer.svg" width="100%" alt="close the world, open the next" />
+</p>
+
+<p align="center"><sub>tudo aqui (ASCII, SVGs animados, a Lain em dithering) é gerado por código em <a href="scripts/"><code>scripts/</code></a> 🐧</sub></p>

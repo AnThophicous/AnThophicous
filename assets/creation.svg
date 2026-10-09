@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-label="A Criação de Adão em ASCII — as mãos quase se tocam">
+<title>A Criação de Adão em ASCII — as mãos quase se tocam</title>
+<style>
+text { font-family: 'JetBrains Mono','Fira Code','DejaVu Sans Mono',Menlo,Consolas,'Courier New',monospace; white-space: pre; }
+
+.bg{fill:#07070b}
+.art text{font-size:8.6px;font-weight:700}
+.adam{fill:url(#skinA);animation:adam 7s ease-in-out infinite}
+.god{fill:url(#skinG);animation:god 7s ease-in-out infinite}
+@keyframes adam{0%,100%{transform:translateX(0)}50%{transform:translateX(7px)}}
+@keyframes god{0%,100%{transform:translateX(0)}50%{transform:translateX(-8px)}}
+.spark{animation:spark 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spark{0%,30%,70%,100%{opacity:.08;transform:scale(.4)}50%{opacity:1;transform:scale(1.25)}}
+.star{fill:#fff;animation:tw 6s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.08}50%{opacity:.7}}
+.t1{fill:#efe6d8;font-size:20px;letter-spacing:9px}
+.t2{fill:#7d7a74;font-size:11px;letter-spacing:3px}
+.t3{fill:#cfc6b8;font-size:13px;font-style:italic}
+.t4{fill:#5f5c58;font-size:11px}
+.red{fill:#ff2e4d}
+.bit{fill:#ffcf8a;font-size:9px;opacity:0;animation:flow 4.2s linear infinite}
+@keyframes flow{0%{opacity:0;transform:translate(0,0)}12%{opacity:.9}85%{opacity:.9}100%{opacity:0;transform:translate(-300px,-14px)}}
+.sweep{animation:sweep 8s linear infinite}
+@keyframes sweep{from{transform:translateY(0)}to{transform:translateY(440px)}}
+
+</style>
+<defs>
+<linearGradient id="skinA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a88466"/><stop offset=".7" stop-color="#f0d2b4"/><stop offset="1" stop-color="#fff3e2"/></linearGradient>
+<linearGradient id="skinG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff6ea"/><stop offset=".5" stop-color="#f3d7bb"/><stop offset="1" stop-color="#b08a6c"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#fff2d2" stop-opacity=".95"/><stop offset=".25" stop-color="#ffcf8a" stop-opacity=".55"/><stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/></radialGradient>
+<radialGradient id="halo" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#3a2a18" stop-opacity=".55"/><stop offset="1" stop-color="#07070b" stop-opacity="0"/></radialGradient>
+<linearGradient id="sweepg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".85" stop-color="#fff" stop-opacity=".05"/>
+<stop offset="1" stop-color="#fff" stop-opacity=".12"/></linearGradient></defs>
+<rect class="bg" width="900" height="360" rx="14"/>
+<rect width="900" height="360" fill="url(#halo)" rx="14"/>
+<circle cx="321" cy="308" r="1" class="star" style="animation-delay:-4.33s"/>
+<circle cx="847" cy="287" r="1" class="star" style="animation-delay:-3.90s"/>
+<circle cx="663" cy="45" r="1" class="star" style="animation-delay:-3.58s"/>
+<circle cx="746" cy="65" r="0.8" class="star" style="animation-delay:-4.93s"/>
+<circle cx="718" cy="282" r="1" class="star" style="animation-delay:-5.89s"/>
+<circle cx="737" cy="36" r="1" class="star" style="animation-delay:-1.01s"/>
+<circle cx="513" cy="95" r="1" class="star" style="animation-delay:-4.22s"/>
+<circle cx="759" cy="19" r="1" class="star" style="animation-delay:-4.37s"/>
+<circle cx="842" cy="46" r="1" class="star" style="animation-delay:-0.35s"/>
+<circle cx="391" cy="345" r="0.6" class="star" style="animation-delay:-5.59s"/>
+<circle cx="375" cy="61" r="1" class="star" style="animation-delay:-1.02s"/>
+<circle cx="286" cy="300" r="0.6" class="star" style="animation-delay:-1.63s"/>
+<circle cx="74" cy="77" r="1" class="star" style="animation-delay:-3.42s"/>
+<circle cx="604" cy="100" r="0.6" class="star" style="animation-delay:-4.43s"/>
+<circle cx="538" cy="346" r="1" class="star" style="animation-delay:-3.22s"/>
+<circle cx="73" cy="27" r="1" class="star" style="animation-delay:-2.41s"/>
+<circle cx="348" cy="27" r="1" class="star" style="animation-delay:-2.53s"/>
+<circle cx="552" cy="25" r="1" class="star" style="animation-delay:-3.37s"/>
+<circle cx="471" cy="309" r="0.6" class="star" style="animation-delay:-1.76s"/>
+<circle cx="568" cy="11" r="1.3" class="star" style="animation-delay:-4.98s"/>
+<circle cx="584" cy="10" r="0.8" class="star" style="animation-delay:-2.76s"/>
+<circle cx="770" cy="99" r="1" class="star" style="animation-delay:-1.05s"/>
+<circle cx="755" cy="75" r="0.6" class="star" style="animation-delay:-5.42s"/>
+<circle cx="387" cy="62" r="1" class="star" style="animation-delay:-5.23s"/>
+<circle cx="218" cy="352" r="1" class="star" style="animation-delay:-0.66s"/>
+<circle cx="468" cy="34" r="0.8" class="star" style="animation-delay:-0.18s"/>
+<circle cx="406" cy="336" r="0.6" class="star" style="animation-delay:-2.66s"/>
+<circle cx="820" cy="308" r="0.6" class="star" style="animation-delay:-1.39s"/>
+<circle cx="149" cy="350" r="1" class="star" style="animation-delay:-3.30s"/>
+<circle cx="490" cy="302" r="0.8" class="star" style="animation-delay:-5.49s"/>
+<circle cx="848" cy="14" r="0.6" class="star" style="animation-delay:-5.52s"/>
+<circle cx="648" cy="63" r="0.6" class="star" style="animation-delay:-5.64s"/>
+<circle cx="636" cy="346" r="0.8" class="star" style="animation-delay:-1.44s"/>
+<circle cx="843" cy="301" r="0.6" class="star" style="animation-delay:-5.91s"/>
+<circle cx="569" cy="33" r="1.3" class="star" style="animation-delay:-2.90s"/>
+<circle cx="391" cy="15" r="0.6" class="star" style="animation-delay:-1.67s"/>
+<circle cx="306" cy="70" r="0.8" class="star" style="animation-delay:-2.98s"/>
+<circle cx="820" cy="311" r="0.8" class="star" style="animation-delay:-0.91s"/>
+<circle cx="612" cy="11" r="0.8" class="star" style="animation-delay:-3.05s"/>
+<text x="450.0" y="44" class="t1" text-anchor="middle">A CRIAÇÃO DE ADÃO</text>
+<text x="450.0" y="66" class="t2" text-anchor="middle">MICHELANGELO · CAPELA SISTINA · c.1512 · <tspan class="red">LAYER:04 RELIGION</tspan></text>
+<g class="art"><g class="adam"><text x="22.5" y="120.0" textLength="356.2" lengthAdjust="spacingAndGlyphs" class="">                                                                         ++</text>
+<text x="22.5" y="128.4" textLength="403.8" lengthAdjust="spacingAndGlyphs" class="">                                                                      =++**cccccc***+</text>
+<text x="22.5" y="136.8" textLength="451.2" lengthAdjust="spacingAndGlyphs" class="">                                                                  +*++===++***ccc*+++***cccccx*</text>
+<text x="22.5" y="145.2" textLength="470.2" lengthAdjust="spacingAndGlyphs" class="">                                                             =++**cxoOOOOOox++++**+=  =+++++*cooc*+</text>
+<text x="22.5" y="153.6" textLength="484.5" lengthAdjust="spacingAndGlyphs" class="">                                                         +***ccxoO#%%%%%%%%#c++==+**++cxxc++++*cxoOox*</text>
+<text x="22.5" y="162.0" textLength="489.2" lengthAdjust="spacingAndGlyphs" class="">                                             +++******ccccccxxooO#%%##%%%%%%O*++===++*o%#OO#oxoOc*+*coO</text>
+<text x="22.5" y="170.4" textLength="498.8" lengthAdjust="spacingAndGlyphs" class="">                                      ++****cccccccccccccccxxoO#%%%%%%%%%Ox*  +*c*+===*O@%O%@@@@%%#%occoc</text>
+<text x="22.5" y="178.8" textLength="503.5" lengthAdjust="spacingAndGlyphs" class="">                                   ++**ccc**c*cccccccccccxxoo#%%%%%@%@@O+      +ccx*++*cxoxO@@##%@@@%ocooo</text>
+<text x="22.5" y="187.2" textLength="508.2" lengthAdjust="spacingAndGlyphs" class="">                               ++****cccccc**cccccccccxxooO##%%%%@@@@#c               +***xoO%#+c%@###+cxOx</text>
+<text x="22.5" y="195.6" textLength="489.2" lengthAdjust="spacingAndGlyphs" class="">         **++****ccccc*    ++***cccccxcccccccccccccxxooO##%%%%@@@@@#c                    +ccxo#c c##O@o</text>
+<text x="22.5" y="204.0" textLength="489.2" lengthAdjust="spacingAndGlyphs" class="">   **ccccccccccccccxoxxooxxcccxxxxxxxxxxcccccccccxxoO##%%%%%%%@@%#x                        o#OxO  c@###</text>
+<text x="22.5" y="212.4" textLength="489.2" lengthAdjust="spacingAndGlyphs" class="">**cccccccccccccccccoxxxxoOOoxooooxxxxxccccccccccxxoOO#%%%%%%%#Oo*                          *       xc*x</text>
+<text x="22.5" y="220.8" textLength="289.8" lengthAdjust="spacingAndGlyphs" class="">ccccccccccccccccccxxccxxoooOOOoc****cc*ccccccxooooOO###%%%#Oc</text>
+<text x="22.5" y="229.2" textLength="275.5" lengthAdjust="spacingAndGlyphs" class="">cccxccccccccccccxxxooooooooOOOOc****cccccccxxoOOOO####%%Ox</text>
+<text x="22.5" y="237.6" textLength="266.0" lengthAdjust="spacingAndGlyphs" class="">xxxxxoxxxxxxooooooO##OOOO###%%#ooxxxooooOO#######%%%%#o*</text>
+<text x="22.5" y="246.0" textLength="251.8" lengthAdjust="spacingAndGlyphs" class="">ooooOOOOOOOOOOOO###%##%%@@@%%#OOoooOOO#%%%%%%@%%%%%Oc</text>
+<text x="22.5" y="254.4" textLength="242.2" lengthAdjust="spacingAndGlyphs" class="">%%#%%%%##########%%%%%%%@@@@@%%%%%%%%%@@%%%%%%%#oc+</text>
+<text x="22.5" y="262.8" textLength="232.8" lengthAdjust="spacingAndGlyphs" class="">%%%%%%@@%%%%%%%%%@%%%%%%%%%%%@@@@%%@@%Oxc*ccxoox*</text></g><g class="god"><text x="545.0" y="120.0" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">                                                            +++++++**+</text>
+<text x="545.0" y="128.4" textLength="323.0" lengthAdjust="spacingAndGlyphs" class="">                                                       ====++     ++</text>
+<text x="545.0" y="136.8" textLength="327.8" lengthAdjust="spacingAndGlyphs" class="">                                           ======   ===+++++++   ++++</text>
+<text x="545.0" y="145.2" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">                                       =+****++++++++++*+++++++++++*++</text>
+<text x="545.0" y="153.6" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">                              ==+***+**cc****+++++==           =++***c</text>
+<text x="545.0" y="162.0" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">                        =+++++ccxxooooxxc**++===++==         =+++*ccxo</text>
+<text x="545.0" y="170.4" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">               ++++*+==+=++coO#Ooooxxxxcc***++***c***++++++++***ccxooO</text>
+<text x="545.0" y="178.8" textLength="332.5" lengthAdjust="spacingAndGlyphs" class=""> +cccoOxxxx*  ++oo*  =+==+*o##OOOooooooooxxxxxxxoooxxxxcccccxxxxooOO##</text>
+<text x="545.0" y="187.2" textLength="332.5" lengthAdjust="spacingAndGlyphs" class=""> **         +xOxx+  +xOccxO#OOOOOOOOOOOOooOoooooOOOOOoooooooOOOOOOOOOO</text>
+<text x="545.0" y="195.6" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">             cc*=*oO#%######OOOOx*     *cxooxxoooxxxxxxoooooOOOOOOO#%@</text>
+<text x="545.0" y="204.0" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">            *+*xO#oxxOOOOO##Oo                          cxxxxooxoxO@@@</text>
+<text x="545.0" y="212.4" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">          +**cOOco#c*xooxxox                            *xxcxOOxxo%@@@</text>
+<text x="545.0" y="220.8" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">           *o#ocxo**cOc**                               *xxcxOOooo%@@@</text>
+<text x="545.0" y="229.2" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">           *OO*xO  O#x                                  *xcccoOooO#@@@</text>
+<text x="545.0" y="237.6" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">           *Ox*o   xxc                                   ccccoOOoO%@@@</text>
+<text x="545.0" y="246.0" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">           +xx+x                                         ccxcxoOOO%@@@</text>
+<text x="545.0" y="254.4" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">                                                         ccxcxoOOO%@@@</text>
+<text x="545.0" y="262.8" textLength="332.5" lengthAdjust="spacingAndGlyphs" class="">                                                         *cxxxoO#O#@@@</text></g></g>
+<text x="896" y="157" class="bit" style="animation-delay:-0.0s">0</text><text x="866" y="178" class="bit" style="animation-delay:-0.3s">1</text><text x="907" y="167" class="bit" style="animation-delay:-0.6s">1</text><text x="905" y="180" class="bit" style="animation-delay:-0.9s">1</text><text x="893" y="159" class="bit" style="animation-delay:-1.2s">1</text><text x="876" y="167" class="bit" style="animation-delay:-1.5s">1</text><text x="865" y="157" class="bit" style="animation-delay:-1.8s">0</text><text x="902" y="171" class="bit" style="animation-delay:-2.1s">1</text><text x="883" y="172" class="bit" style="animation-delay:-2.4s">1</text><text x="896" y="160" class="bit" style="animation-delay:-2.7s">0</text><text x="885" y="156" class="bit" style="animation-delay:-3.0s">0</text><text x="894" y="169" class="bit" style="animation-delay:-3.3s">0</text><text x="880" y="154" class="bit" style="animation-delay:-3.6s">0</text><text x="901" y="166" class="bit" style="animation-delay:-3.9s">0</text>
+<circle class="spark" cx="542.2" cy="178.8" r="22" fill="url(#glow)"/>
+<text x="450.0" y="308" class="t3" text-anchor="middle">“quase se tocam — e é nesse espaço que tudo é criado.”</text>
+<text x="450.0" y="334" class="t4" text-anchor="middle">$ ping adam  →  64 bytes from adam: icmp_seq=1 ttl=∞ time=0.0001 ms  <tspan class="red">(distância: nunca zero)</tspan></text>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".28"/></pattern><rect width="900" height="360" fill="url(#scan)" pointer-events="none"/><rect class="sweep" x="0" y="-60" width="900" height="60" fill="url(#sweepg)"/>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" role="img" aria-label="AnThophicous — present day, present time">
+<title>AnThophicous — present day, present time</title>
+<style>
+text { font-family: 'JetBrains Mono','Fira Code','DejaVu Sans Mono',Menlo,Consolas,'Courier New',monospace; white-space: pre; }
+
+.bg{fill:#07070b}
+.dim{fill:#5c5c6e;font-size:12px}
+.red{fill:#ff2e4d}
+.cmd{fill:#d8d8e6;font-size:15px}
+.sub{fill:#9a9ab0;font-size:14px;letter-spacing:.5px}
+.name text{font-size:16px}
+.main{fill:url(#ng)}
+.gr{fill:#ff2e4d;opacity:0;mix-blend-mode:screen;animation:g1 5s infinite steps(1)}
+.gc{fill:#2ef0ff;opacity:0;mix-blend-mode:screen;animation:g2 5s infinite steps(1)}
+.jit{animation:jit 5s infinite steps(1)}
+@keyframes g1{0%,84%,100%{opacity:0;transform:none}85%{opacity:.85;transform:translate(-5px,1px)}87%{opacity:.85;transform:translate(4px,-2px)}89%{opacity:.7;transform:translate(-2px,0)}91%{opacity:0}}
+@keyframes g2{0%,84%,100%{opacity:0;transform:none}85%{opacity:.85;transform:translate(5px,-1px)}87%{opacity:.85;transform:translate(-3px,2px)}89%{opacity:.7;transform:translate(3px,0)}91%{opacity:0}}
+@keyframes jit{0%,84%,92%,100%{transform:none}86%{transform:translate(2px,0) skewX(-6deg)}88%{transform:translate(-3px,0)}90%{transform:translate(1px,0) skewX(4deg)}}
+.blink{animation:blink 1s infinite steps(1)}
+@keyframes blink{50%{opacity:0}}
+.flick{animation:flick 7s infinite}
+@keyframes flick{0%,100%{opacity:1}42%{opacity:1}43%{opacity:.2}44%{opacity:1}46%{opacity:.4}47%{opacity:1}}
+.sweep{animation:sweep 6s linear infinite}
+@keyframes sweep{from{transform:translateY(0)}to{transform:translateY(400px)}}
+.wire{stroke:#2a2a36;stroke-width:1;fill:none}
+.pulse{fill:#ff2e4d}
+
+</style>
+<defs>
+<linearGradient id="ng" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#ffd6de"/><stop offset=".5" stop-color="#ff2e4d"/>
+<stop offset=".55" stop-color="#ffd6de"/><stop offset="1" stop-color="#ffffff"/>
+<animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0" dur="6s" repeatCount="indefinite"/>
+</linearGradient><linearGradient id="sweepg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".85" stop-color="#fff" stop-opacity=".05"/>
+<stop offset="1" stop-color="#fff" stop-opacity=".12"/></linearGradient></defs>
+<rect class="bg" width="900" height="330" rx="14"/>
+<path id="w0" class="wire" d="M -10 38 Q 450 70 910 38"/><circle r="2" class="pulse"><animateMotion dur="3s" repeatCount="indefinite" begin="-0s"><mpath href="#w0"/></animateMotion></circle><path id="w1" class="wire" d="M -10 300 Q 450 268 910 300"/><circle r="2" class="pulse"><animateMotion dur="4s" repeatCount="indefinite" begin="-1s"><mpath href="#w1"/></animateMotion></circle><path id="w2" class="wire" d="M -10 318 Q 450 290 910 318"/><circle r="2" class="pulse"><animateMotion dur="5s" repeatCount="indefinite" begin="-2s"><mpath href="#w2"/></animateMotion></circle>
+<text x="22" y="30" class="dim">LAYER:01 // WEIRD</text>
+<text x="878" y="30" class="dim" text-anchor="end">NAVI ▸ <tspan class="red blink">●</tspan> CONNECTED</text>
+<clipPath id="tp"><rect x="40" y="62" width="0" height="28"><animate attributeName="width" values="0.0;9.0;18.0;27.0;36.0;45.0;54.0;63.0;72.0;81.0;90.0;99.0;108.0;117.0;126.0;135.0;144.0;153.0;162.0;171.0;180.0;189.0;198.0;207.0;216.0;225.0;234.0;243.0;252.0;261.0;270.0;279.0;288.0;297.0;306.0;315.0;324.0;333.0;342.0;351.0;360.0;369.0;378.0;387.0;396.0;405.0;414.0;423.0;432.0;441.0;450.0;450.0;0" keyTimes="0.0000;0.0110;0.0220;0.0330;0.0440;0.0550;0.0660;0.0770;0.0880;0.0990;0.1100;0.1210;0.1320;0.1430;0.1540;0.1650;0.1760;0.1870;0.1980;0.2090;0.2200;0.2310;0.2420;0.2530;0.2640;0.2750;0.2860;0.2970;0.3080;0.3190;0.3300;0.3410;0.3520;0.3630;0.3740;0.3850;0.3960;0.4070;0.4180;0.4290;0.4400;0.4510;0.4620;0.4730;0.4840;0.4950;0.5060;0.5170;0.5280;0.5390;0.5500;0.9700;1.0000" dur="9s" calcMode="discrete" repeatCount="indefinite"/></rect></clipPath><text x="40" y="82" class="cmd" clip-path="url(#tp)" xml:space="preserve">$ ./present_day --present-time --user=anthophicous</text>
+<g class="name jit">
+<g class="gr"><text x="32.9" y="128.0" textLength="834.2" lengthAdjust="spacingAndGlyphs" class=""> █████╗ ███╗   ██╗████████╗██╗  ██╗ ██████╗ ██████╗ ██╗  ██╗██╗ ██████╗ ██████╗ ██╗   ██╗███████╗</text>
+<text x="32.9" y="145.2" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██╔══██╗████╗  ██║╚══██╔══╝██║  ██║██╔═══██╗██╔══██╗██║  ██║██║██╔════╝██╔═══██╗██║   ██║██╔════╝</text>
+<text x="32.9" y="162.4" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">███████║██╔██╗ ██║   ██║   ███████║██║   ██║██████╔╝███████║██║██║     ██║   ██║██║   ██║███████╗</text>
+<text x="32.9" y="179.6" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██╔══██║██║╚██╗██║   ██║   ██╔══██║██║   ██║██╔═══╝ ██╔══██║██║██║     ██║   ██║██║   ██║╚════██║</text>
+<text x="32.9" y="196.8" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██║  ██║██║ ╚████║   ██║   ██║  ██║╚██████╔╝██║     ██║  ██║██║╚██████╗╚██████╔╝╚██████╔╝███████║</text>
+<text x="32.9" y="214.0" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝</text></g><g class="gc"><text x="32.9" y="128.0" textLength="834.2" lengthAdjust="spacingAndGlyphs" class=""> █████╗ ███╗   ██╗████████╗██╗  ██╗ ██████╗ ██████╗ ██╗  ██╗██╗ ██████╗ ██████╗ ██╗   ██╗███████╗</text>
+<text x="32.9" y="145.2" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██╔══██╗████╗  ██║╚══██╔══╝██║  ██║██╔═══██╗██╔══██╗██║  ██║██║██╔════╝██╔═══██╗██║   ██║██╔════╝</text>
+<text x="32.9" y="162.4" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">███████║██╔██╗ ██║   ██║   ███████║██║   ██║██████╔╝███████║██║██║     ██║   ██║██║   ██║███████╗</text>
+<text x="32.9" y="179.6" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██╔══██║██║╚██╗██║   ██║   ██╔══██║██║   ██║██╔═══╝ ██╔══██║██║██║     ██║   ██║██║   ██║╚════██║</text>
+<text x="32.9" y="196.8" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██║  ██║██║ ╚████║   ██║   ██║  ██║╚██████╔╝██║     ██║  ██║██║╚██████╗╚██████╔╝╚██████╔╝███████║</text>
+<text x="32.9" y="214.0" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝</text></g><g class="main"><text x="32.9" y="128.0" textLength="834.2" lengthAdjust="spacingAndGlyphs" class=""> █████╗ ███╗   ██╗████████╗██╗  ██╗ ██████╗ ██████╗ ██╗  ██╗██╗ ██████╗ ██████╗ ██╗   ██╗███████╗</text>
+<text x="32.9" y="145.2" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██╔══██╗████╗  ██║╚══██╔══╝██║  ██║██╔═══██╗██╔══██╗██║  ██║██║██╔════╝██╔═══██╗██║   ██║██╔════╝</text>
+<text x="32.9" y="162.4" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">███████║██╔██╗ ██║   ██║   ███████║██║   ██║██████╔╝███████║██║██║     ██║   ██║██║   ██║███████╗</text>
+<text x="32.9" y="179.6" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██╔══██║██║╚██╗██║   ██║   ██╔══██║██║   ██║██╔═══╝ ██╔══██║██║██║     ██║   ██║██║   ██║╚════██║</text>
+<text x="32.9" y="196.8" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">██║  ██║██║ ╚████║   ██║   ██║  ██║╚██████╔╝██║     ██║  ██║██║╚██████╗╚██████╔╝╚██████╔╝███████║</text>
+<text x="32.9" y="214.0" textLength="834.2" lengthAdjust="spacingAndGlyphs" class="">╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝</text></g>
+</g>
+<text x="450.0" y="253.2" class="sub" text-anchor="middle">dev brasileiro · <tspan class="red">16 anos</tspan> · front-end → backend · ia · cybersec · linux</text>
+<text x="450.0" y="281.2" class="dim flick" text-anchor="middle" style="font-size:13px">&gt; no matter where you go, everyone's connected<tspan class="red blink">█</tspan></text>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".28"/></pattern><rect width="900" height="330" fill="url(#scan)" pointer-events="none"/><rect class="sweep" x="0" y="-60" width="900" height="60" fill="url(#sweepg)"/>
+</svg>
