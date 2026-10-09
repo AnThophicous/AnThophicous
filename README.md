@@ -36,8 +36,6 @@
 <tr>
 <td width="50%" align="center">
   <img src="assets/lain.gif" width="100%" alt="Lain Iwakura em 1-bit com dithering" />
-  <br/>
-  <sub><a href="assets/lain.mp4">▶ assistir em mp4 (5s)</a> · <a href="assets/lain.png">png sem fundo</a></sub>
 </td>
 <td width="50%">
 

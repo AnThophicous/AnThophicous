@@ -202,20 +202,71 @@ def creation():
 
 
 # ─────────────────────────────────────────────────────────── neofetch ──
-TUX = r'''
-        #####
-       #######
-       ##O#O##
-       #VVVVV#
-     ##  VVV  ##
-    #          ##
-   #            ##
-   #            ###
-  QQ#           ##Q
-QQQQQQ#       #QQQQQQ
-QQQQQQQ#     #QQQQQQQ
-  QQQQQ#######QQQQQ
+# Tux em pixel art. K=corpo  G=brilho  W=barriga  E=olho  P=pupila  Y=bico/pés  D=sombra amarela
+TUX = '''
+...........KKKKKK...........
+.........KKKKKKKKKK.........
+........KKKKKKKKKKKK........
+.......KKKGKKKKKKKKKK.......
+.......KKGKKKKKKKKKKK.......
+.......KKEEEKKKKEEEKK.......
+.......KEEEEEKKEEEEEK.......
+.......KEEPPEKKEPPEEK.......
+.......KEEPPEKKEPPEEK.......
+.......KKEEEDYYDEEEKK.......
+.......KKKDYYYYYYDKKK.......
+.......KKYYYYYYYYYYKK.......
+......KKKDYYYYYYYYDKKK......
+......KKWWDDYYYYDDWWKK......
+.....KKWWWWDDDDDDWWWWKK.....
+.....KKWWWWWWWWWWWWWWKK.....
+....KKWWWWWWWWWWWWWWWWKK....
+....KGWWWWWWWWWWWWWWWWGK....
+...KKGWWWWWWWWWWWWWWWWGKK...
+...KGWWWWWWWWWWWWWWWWWWGK...
+..KKGWWWWWWWWWWWWWWWWWWGKK..
+..KGKWWWWWWWWWWWWWWWWWWKGK..
+..KGKWWWWWWWWWWWWWWWWWWKGK..
+..KKKWWWWWWWWWWWWWWWWWWKKK..
+...KKWWWWWWWWWWWWWWWWWWKK...
+...YYYKWWWWWWWWWWWWWWKYYY...
+..YYYYYYKWWWWWWWWWWKYYYYYY..
+.YYYYYYYYKKKKKKKKKKYYYYYYYY.
+.DYYYYYYYD........DYYYYYYYD.
+..DDDDDDD..........DDDDDDD..
 '''.strip('\n').split('\n')
+
+TUX_COLORS = {'O': '#4b4b60', 'K': '#1c1c26', 'G': '#4a4a5e', 'W': '#f0f0f6', 'w': '#c9c9d6',
+              'E': '#ffffff', 'P': '#101016', 'Y': '#f6c343', 'D': '#d68c14'}
+
+
+def tux_pixels(x0, y0, px):
+    # contorno automático (pra o corpo preto não sumir no fundo escuro) + sombra na barriga
+    g = ['.' * (len(TUX[0]) + 2)] + ['.' + l + '.' for l in TUX] + ['.' * (len(TUX[0]) + 2)]
+    g = [list(l) for l in g]
+    H, W = len(g), len(g[0])
+    for y in range(H):
+        for x in range(W):
+            if g[y][x] == '.' and any(0 <= y + dy < H and 0 <= x + dx < W and g[y + dy][x + dx] not in '.O'
+                                      for dy in (-1, 0, 1) for dx in (-1, 0, 1)):
+                g[y][x] = 'O'
+    for y in range(H):
+        for x in range(W):
+            if g[y][x] == 'W' and (g[y][x + 1] not in 'Ww' or g[y + 1][x] not in 'Ww'):
+                g[y][x] = 'w'
+    rects, lids = {}, []
+    for y in range(H):
+        for x in range(W):
+            c = g[y][x]
+            if c == '.':
+                continue
+            r = f'<rect x="{x0 + x * px}" y="{y0 + y * px}" width="{px - .6}" height="{px - .6}"/>'
+            rects.setdefault(c, []).append(r)
+            if c in 'EP':
+                lids.append(r)
+    out = ''.join(f'<g fill="{TUX_COLORS[c]}">{"".join(r)}</g>' for c, r in rects.items())
+    return out + f'<g class="lid" fill="{TUX_COLORS["K"]}">{"".join(lids)}</g>'
+
 
 INFO = [
     ('OS', 'Brasil (BR) x86_64'),
@@ -235,11 +286,7 @@ INFO = [
 
 def neofetch():
     W, H = 900, 400
-    cw, lh = 10.2, 19
-    tx, ty = 46, 108
-    tux = (lines_svg(TUX, tx, ty, cw, lh, 'tb', keep='#') +
-           lines_svg(TUX, tx, ty, cw, lh, 'ty', keep='VQ') +
-           lines_svg(TUX, tx, ty, cw, lh, 'tw', keep='O'))
+    tux = tux_pixels(28, 76, 8.6)
     ix, iy = 330, 92
     rows = [f'<text x="{ix}" y="{iy}" class="k" style="animation-delay:1.0s">anthophicous<tspan class="v">@</tspan>wired</text>',
             f'<text x="{ix}" y="{iy + 20}" class="v" style="animation-delay:1.1s">────────────────────</text>']
@@ -262,9 +309,8 @@ def neofetch():
 .ttl{fill:#6d6d80;font-size:12px}
 .p{fill:#d8d8e6;font-size:15px}
 .ps{fill:#ff2e4d}
-.tb{fill:#d9d9e3;font-size:17px;font-weight:700}
-.ty{fill:#f6c343;font-size:17px;font-weight:700}
-.tw{fill:#ffffff;font-size:17px;font-weight:700}
+.lid{opacity:0;animation:lid 4.5s infinite steps(1)}
+@keyframes lid{0%,92%,100%{opacity:0}93%,95%{opacity:1}}
 .tux{animation:bob 3s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .info text{font-size:14px;opacity:0;animation:in .35s ease-out forwards}
