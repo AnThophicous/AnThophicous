@@ -50,7 +50,9 @@ body.is-ready .hud {
   padding: 0 16px;
   border: 1px solid currentColor;
   border-radius: 999px;
-  transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out);
+  transition:
+    background-color 0.4s var(--ease-out),
+    color 0.4s var(--ease-out);
 }
 
 .hud__sound:hover,

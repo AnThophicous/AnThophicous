@@ -75,11 +75,23 @@ export function paintCoverImage(book: BookEntry, index: number, width: number): 
   const canvas = document.createElement('canvas');
   canvas.width = width;
   canvas.height = Math.round(width / book.ratio);
-  paintFront(canvas.getContext('2d')!, { x: 0, y: 0, width, height: canvas.height }, book, index, paletteFor(book));
+  paintFront(
+    canvas.getContext('2d')!,
+    { x: 0, y: 0, width, height: canvas.height },
+    book,
+    index,
+    paletteFor(book),
+  );
   return canvas;
 }
 
-function paintFront(ctx: CanvasRenderingContext2D, rect: Rect, book: BookEntry, index: number, palette: Palette): void {
+function paintFront(
+  ctx: CanvasRenderingContext2D,
+  rect: Rect,
+  book: BookEntry,
+  index: number,
+  palette: Palette,
+): void {
   const { x, y, width, height } = rect;
   const margin = width * 0.075;
   ctx.fillStyle = palette.paper;
@@ -90,11 +102,25 @@ function paintFront(ctx: CanvasRenderingContext2D, rect: Rect, book: BookEntry, 
   ctx.textBaseline = 'top';
   ctx.font = `500 ${width * 0.045}px ${FONT}`;
   ctx.fillText(formatIndex(index + 1), x + margin, y + margin);
-  caption(ctx, book.subject.toUpperCase(), x + width - margin, y + margin + width * 0.008, width * 0.026, palette.muted, 'right');
+  caption(
+    ctx,
+    book.subject.toUpperCase(),
+    x + width - margin,
+    y + margin + width * 0.008,
+    width * 0.026,
+    palette.muted,
+    'right',
+  );
 
   const motifSize = width - margin * 2.6;
   const motifTop = y + margin * 2.2;
-  MOTIFS[book.motif](ctx, { x: x + margin * 1.3, y: motifTop, size: motifSize, ink: palette.ink, paper: palette.paper });
+  MOTIFS[book.motif](ctx, {
+    x: x + margin * 1.3,
+    y: motifTop,
+    size: motifSize,
+    ink: palette.ink,
+    paper: palette.paper,
+  });
 
   const ruleY = y + height * 0.7;
   ctx.fillStyle = palette.ink;
@@ -127,7 +153,15 @@ function paintBack(ctx: CanvasRenderingContext2D, rect: Rect, book: BookEntry, p
   });
   ctx.font = `500 ${width * 0.034}px ${FONT}`;
   ctx.fillText(book.title, x + margin, y + height - margin - width * 0.09);
-  caption(ctx, `${book.author.toUpperCase()}  /  READ IN ${book.readIn}`, x + margin, y + height - margin - width * 0.035, width * 0.022, palette.muted, 'left');
+  caption(
+    ctx,
+    `${book.author.toUpperCase()}  /  READ IN ${book.readIn}`,
+    x + margin,
+    y + height - margin - width * 0.035,
+    width * 0.022,
+    palette.muted,
+    'left',
+  );
 }
 
 function paintSpine(ctx: CanvasRenderingContext2D, rect: Rect, book: BookEntry, palette: Palette): void {

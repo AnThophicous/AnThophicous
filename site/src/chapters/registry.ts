@@ -5,6 +5,7 @@ import { HorizonLine } from '@/webgl/surface/HorizonLine';
 import type { Chapter } from './Chapter';
 import { OceanChapter } from './ocean/OceanChapter';
 import { PlaceholderChapter } from './PlaceholderChapter';
+import { RoomChapter } from './room/RoomChapter';
 import { WelcomeChapter } from './welcome/WelcomeChapter';
 
 export function createChapters(context: Context): Map<SectionId, Chapter> {
@@ -13,8 +14,10 @@ export function createChapters(context: Context): Map<SectionId, Chapter> {
   const chapters = new Map<SectionId, Chapter>();
   chapters.set('welcome', new WelcomeChapter(context, line));
   chapters.set('ocean', new OceanChapter(context, line, card));
+  chapters.set('room', new RoomChapter(context));
   SECTIONS.forEach((spec, index) => {
-    if (!chapters.has(spec.id)) chapters.set(spec.id, new PlaceholderChapter(context, spec, index % 2 ? 0.05 : 0.9));
+    if (!chapters.has(spec.id))
+      chapters.set(spec.id, new PlaceholderChapter(context, spec, index % 2 ? 0.05 : 0.9));
   });
   return chapters;
 }

@@ -94,7 +94,8 @@ export class BookShoal {
 
   drag(clientX: number, clientY: number): void {
     if (!this.grab) return;
-    if (Math.hypot(clientX - this.grab.startX, clientY - this.grab.startY) > CLICK_TOLERANCE) this.grab.moved = true;
+    if (Math.hypot(clientX - this.grab.startX, clientY - this.grab.startY) > CLICK_TOLERANCE)
+      this.grab.moved = true;
   }
 
   release(): void {
@@ -135,7 +136,8 @@ export class BookShoal {
     mesh.position.addScaledVector(velocity, delta);
     this.spin.setFromAxisAngle(book.spinAxis, book.spinRate * delta);
     mesh.quaternion.premultiply(this.spin);
-    if (mesh.position.y > waterLevel(mesh.position.x, mesh.position.z) - SURFACE_OFFSET * 3) book.state = 'surfaced';
+    if (mesh.position.y > waterLevel(mesh.position.x, mesh.position.z) - SURFACE_OFFSET * 3)
+      book.state = 'surfaced';
   }
 
   private float(book: Book, time: number, delta: number, waterLevel: WaterLevel): void {
@@ -146,7 +148,9 @@ export class BookShoal {
     const surface = waterLevel(mesh.position.x, mesh.position.z) - SURFACE_OFFSET;
     mesh.position.y = damp(mesh.position.y, surface, 6, delta);
     const heading = book.phase + Math.sin(time * 0.1 + book.phase) * 0.2;
-    this.facing.copy(FLAT_ON_WATER).premultiply(this.spin.setFromAxisAngle(THREE.Object3D.DEFAULT_UP, heading));
+    this.facing
+      .copy(FLAT_ON_WATER)
+      .premultiply(this.spin.setFromAxisAngle(THREE.Object3D.DEFAULT_UP, heading));
     mesh.quaternion.slerp(this.facing, 1 - Math.exp(-delta * 1.4));
   }
 
@@ -183,7 +187,9 @@ export class BookShoal {
       .addScaledVector(this.forward, randomBetween(random, 6, 10))
       .addScaledVector(this.right, randomBetween(random, -3.2, 3.2));
     book.mesh.position.y = camera.position.y - randomBetween(random, 6, 9) - extraDepth;
-    book.mesh.quaternion.setFromEuler(new THREE.Euler(random() * Math.PI, random() * Math.PI * 2, random() * Math.PI));
+    book.mesh.quaternion.setFromEuler(
+      new THREE.Euler(random() * Math.PI, random() * Math.PI * 2, random() * Math.PI),
+    );
     book.spinAxis.set(random() - 0.5, random() - 0.5, random() - 0.5).normalize();
     book.spinRate = randomBetween(random, 0.1, 0.45);
     book.riseSpeed = randomBetween(random, 1.1, 1.8);

@@ -15,7 +15,12 @@ import { Renderer } from '@/webgl/Renderer';
 import type { Context } from './Context';
 import { Director } from './Director';
 
-const FONT_FACES = ['400 1em "Impostor Pro"', '500 1em "Impostor Pro"', '600 1em "Impostor Pro"', '700 1em "Impostor Pro"'];
+const FONT_FACES = [
+  '400 1em "Impostor Pro"',
+  '500 1em "Impostor Pro"',
+  '600 1em "Impostor Pro"',
+  '700 1em "Impostor Pro"',
+];
 
 export class Experience {
   private readonly viewport = new Viewport();

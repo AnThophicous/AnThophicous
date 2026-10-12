@@ -64,7 +64,10 @@ export class WelcomeChapter implements Chapter {
     this.progress = progress;
     this.beats.update(progress);
     this.hint.style.opacity = progress < HINT_LIMIT ? '1' : '0';
-    this.soundPrompt.classList.toggle('is-hidden', this.soundAnswered || this.context.sound.enabled || progress > 0.14);
+    this.soundPrompt.classList.toggle(
+      'is-hidden',
+      this.soundAnswered || this.context.sound.enabled || progress > 0.14,
+    );
     if (progress < GATE_RESET) this.dive.reset();
     this.dive.setVisible(progress > GATE_REVEAL);
     this.dive.update(frame.delta, frame.pointer);
@@ -81,7 +84,14 @@ export class WelcomeChapter implements Chapter {
     const lineY = height * 0.5;
     this.interaction.update(frame.delta, frame.pointer, frame.size, this.active);
     this.view.paper.resize(width, height, this.context.renderer.pixelRatio);
-    this.view.paper.update({ lineY, reveal: 0, originX: width / 2, originY: lineY, ink: 0, time: frame.time });
+    this.view.paper.update({
+      lineY,
+      reveal: 0,
+      originX: width / 2,
+      originY: lineY,
+      ink: 0,
+      time: frame.time,
+    });
   }
 
   private descend(): void {

@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { seededRandom } from '@/core/math';
 
-const vertexShader = /* glsl */ `
+const vertexShader = `
   attribute vec4 aSeed;
   uniform float uAge;
   uniform vec3 uOrigin;
@@ -24,7 +24,7 @@ const vertexShader = /* glsl */ `
   }
 `;
 
-const fragmentShader = /* glsl */ `
+const fragmentShader = `
   varying float vAlpha;
 
   void main() {

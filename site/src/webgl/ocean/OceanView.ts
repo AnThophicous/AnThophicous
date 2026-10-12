@@ -4,7 +4,12 @@ import type { ViewportSize } from '@/core/Viewport';
 import type { HorizonLine } from '@/webgl/surface/HorizonLine';
 import { PaperOverlay } from '@/webgl/surface/PaperOverlay';
 import type { View } from '@/webgl/View';
-import { applyAtmosphere, createAtmosphereUniforms, SILVER_OVERCAST, type AtmospherePreset } from './atmosphere';
+import {
+  applyAtmosphere,
+  createAtmosphereUniforms,
+  SILVER_OVERCAST,
+  type AtmospherePreset,
+} from './atmosphere';
 import { BubbleBurst } from './BubbleBurst';
 import { Doorway } from './Doorway';
 import { LightShafts } from './LightShafts';

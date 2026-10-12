@@ -184,7 +184,9 @@
 .dive.is-released .dive__core {
   background: var(--black);
   scale: 0.06;
-  transition: scale 0.5s var(--ease-in-out), background-color 0.2s;
+  transition:
+    scale 0.5s var(--ease-in-out),
+    background-color 0.2s;
 }
 
 .dive.is-released .dive__label {

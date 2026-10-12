@@ -1,13 +1,5 @@
 export type CoverMotif =
-  | 'twoPaths'
-  | 'target'
-  | 'teapot'
-  | 'tenLaws'
-  | 'keypad'
-  | 'frame'
-  | 'codeLines'
-  | 'rings'
-  | 'brokenWindow';
+  'twoPaths' | 'target' | 'teapot' | 'tenLaws' | 'keypad' | 'frame' | 'codeLines' | 'rings' | 'brokenWindow';
 
 export interface BookEntry {
   slug: string;
@@ -65,7 +57,8 @@ export const BOOKS: readonly BookEntry[] = [
     author: 'John Maeda',
     subject: 'Simplicity',
     readIn: 2025,
-    takeaway: 'Simplicity is not about less. It is about removing everything that keeps the meaningful hidden.',
+    takeaway:
+      'Simplicity is not about less. It is about removing everything that keeps the meaningful hidden.',
     motif: 'tenLaws',
     tone: 'light',
     ratio: 0.672,
@@ -101,7 +94,8 @@ export const BOOKS: readonly BookEntry[] = [
     author: 'Robert C. Martin',
     subject: 'Software',
     readIn: 2025,
-    takeaway: 'Code is read far more often than it is written. Write it for the next person, who is usually you.',
+    takeaway:
+      'Code is read far more often than it is written. Write it for the next person, who is usually you.',
     motif: 'codeLines',
     tone: 'dark',
     ratio: 0.756,

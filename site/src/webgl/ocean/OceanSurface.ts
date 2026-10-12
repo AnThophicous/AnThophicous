@@ -14,7 +14,12 @@ export interface OceanGrid {
 
 const ORIGIN_SNAP = 4;
 
-export function createPolarGrid({ rings, segments, innerRadius, outerRadius }: OceanGrid): THREE.BufferGeometry {
+export function createPolarGrid({
+  rings,
+  segments,
+  innerRadius,
+  outerRadius,
+}: OceanGrid): THREE.BufferGeometry {
   const positions: number[] = [0, 0, 0];
   const indices: number[] = [];
   for (let ring = 0; ring < rings; ring += 1) {
@@ -48,11 +53,7 @@ export class OceanSurface {
   readonly mesh: THREE.Mesh;
   readonly material: THREE.ShaderMaterial;
 
-  constructor(
-    grid: OceanGrid,
-    waves: readonly Wave[],
-    sharedUniforms: Record<string, THREE.IUniform>,
-  ) {
+  constructor(grid: OceanGrid, waves: readonly Wave[], sharedUniforms: Record<string, THREE.IUniform>) {
     this.material = new THREE.ShaderMaterial({
       vertexShader,
       fragmentShader: [noise, atmosphere, fragmentMain].join('\n'),

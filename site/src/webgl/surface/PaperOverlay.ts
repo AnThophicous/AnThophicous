@@ -25,7 +25,13 @@ export class PaperOverlay {
 
   constructor(private readonly line: HorizonLine) {
     this.waveData = new Uint16Array(line.count);
-    this.waveTexture = new THREE.DataTexture(this.waveData, line.count, 1, THREE.RedFormat, THREE.HalfFloatType);
+    this.waveTexture = new THREE.DataTexture(
+      this.waveData,
+      line.count,
+      1,
+      THREE.RedFormat,
+      THREE.HalfFloatType,
+    );
     this.waveTexture.magFilter = THREE.LinearFilter;
     this.waveTexture.minFilter = THREE.LinearFilter;
     this.waveTexture.wrapS = THREE.ClampToEdgeWrapping;
@@ -85,7 +91,13 @@ export class PaperOverlay {
     slots.forEach((slot, index) => {
       const ripple = this.line.ripples[index];
       if (!ripple) slot.set(0, 0, 0, 0);
-      else slot.set(ripple.x * this.pixelRatio, (this.height - ripple.y) * this.pixelRatio, ripple.age, ripple.strength);
+      else
+        slot.set(
+          ripple.x * this.pixelRatio,
+          (this.height - ripple.y) * this.pixelRatio,
+          ripple.age,
+          ripple.strength,
+        );
     });
   }
 }

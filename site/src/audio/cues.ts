@@ -58,7 +58,8 @@ function tone(cue: CueContext, spec: ToneSpec, pan = 0): void {
   const oscillator = ctx.createOscillator();
   oscillator.type = spec.type ?? 'sine';
   oscillator.frequency.setValueAtTime(spec.frequency, at);
-  if (spec.endFrequency) oscillator.frequency.exponentialRampToValueAtTime(spec.endFrequency, at + attack + spec.decay);
+  if (spec.endFrequency)
+    oscillator.frequency.exponentialRampToValueAtTime(spec.endFrequency, at + attack + spec.decay);
   const amp = ctx.createGain();
   envelope(amp.gain, at, attack, spec.gain, spec.decay);
   oscillator.connect(amp).connect(output(cue, pan, spec.wet ?? 0));
@@ -75,11 +76,15 @@ function noise(cue: CueContext, spec: NoiseSpec, pan = 0): void {
   const filter = ctx.createBiquadFilter();
   filter.type = spec.filter;
   filter.frequency.setValueAtTime(spec.frequency, at);
-  if (spec.endFrequency) filter.frequency.exponentialRampToValueAtTime(spec.endFrequency, at + attack + spec.decay);
+  if (spec.endFrequency)
+    filter.frequency.exponentialRampToValueAtTime(spec.endFrequency, at + attack + spec.decay);
   filter.Q.value = spec.q ?? 0.8;
   const amp = ctx.createGain();
   envelope(amp.gain, at, attack, spec.gain, spec.decay);
-  source.connect(filter).connect(amp).connect(output(cue, pan, spec.wet ?? 0));
+  source
+    .connect(filter)
+    .connect(amp)
+    .connect(output(cue, pan, spec.wet ?? 0));
   source.start(at, Math.random() * 1.5);
   source.stop(at + attack + spec.decay + 0.05);
 }
@@ -87,10 +92,15 @@ function noise(cue: CueContext, spec: NoiseSpec, pan = 0): void {
 const random = (min: number, max: number): number => min + Math.random() * (max - min);
 
 const CUES: Record<Cue, (cue: CueContext, gain: number, options: CueOptions) => void> = {
-  tick: (cue, gain) => noise(cue, { filter: 'bandpass', frequency: 4600, q: 2.2, decay: 0.03, gain: 0.22 * gain }),
+  tick: (cue, gain) =>
+    noise(cue, { filter: 'bandpass', frequency: 4600, q: 2.2, decay: 0.03, gain: 0.22 * gain }),
   drip: (cue, gain, options) => {
     const frequency = random(900, 1400) * Math.pow(2, (options.pitch ?? 0) / 12);
-    tone(cue, { frequency, endFrequency: frequency * 2.4, attack: 0.002, decay: 0.09, gain: 0.07 * gain, wet: 0.7 }, options.pan ?? 0);
+    tone(
+      cue,
+      { frequency, endFrequency: frequency * 2.4, attack: 0.002, decay: 0.09, gain: 0.07 * gain, wet: 0.7 },
+      options.pan ?? 0,
+    );
   },
   hover: (cue, gain) =>
     tone(cue, { frequency: 2300, endFrequency: 1750, decay: 0.05, gain: 0.025 * gain, attack: 0.004 }),
@@ -109,7 +119,14 @@ const CUES: Record<Cue, (cue: CueContext, gain: number, options: CueOptions) => 
       gain: 0.55 * gain,
       wet: 0.4,
     });
-    noise(cue, { color: 'brown', filter: 'lowpass', frequency: 300, attack: 0.05, decay: 1.2, gain: 0.7 * gain });
+    noise(cue, {
+      color: 'brown',
+      filter: 'lowpass',
+      frequency: 300,
+      attack: 0.05,
+      decay: 1.2,
+      gain: 0.7 * gain,
+    });
     CUES.bubbles(cue, gain * 0.8, {});
   },
   bubbles: (cue, gain) => {
@@ -140,7 +157,11 @@ const CUES: Record<Cue, (cue: CueContext, gain: number, options: CueOptions) => 
       { color: 'brown', filter: 'lowpass', frequency: 180, decay: 0.16, gain: 0.5 * gain },
       options.pan ?? 0,
     );
-    noise(cue, { filter: 'bandpass', frequency: 1600, q: 1.2, decay: 0.04, gain: 0.05 * gain }, options.pan ?? 0);
+    noise(
+      cue,
+      { filter: 'bandpass', frequency: 1600, q: 1.2, decay: 0.04, gain: 0.05 * gain },
+      options.pan ?? 0,
+    );
   },
   keys: (cue, gain) => {
     let time = 0;
@@ -148,7 +169,14 @@ const CUES: Record<Cue, (cue: CueContext, gain: number, options: CueOptions) => 
       time += random(0.06, 0.19);
       noise(
         cue,
-        { filter: 'bandpass', frequency: random(2600, 5200), q: 3, start: time, decay: 0.022, gain: 0.12 * gain },
+        {
+          filter: 'bandpass',
+          frequency: random(2600, 5200),
+          q: 3,
+          start: time,
+          decay: 0.022,
+          gain: 0.12 * gain,
+        },
         random(-0.2, 0.2),
       );
     }
@@ -187,7 +215,14 @@ const CUES: Record<Cue, (cue: CueContext, gain: number, options: CueOptions) => 
   },
   shatter: (cue, gain) => {
     tone(cue, { frequency: 70, endFrequency: 32, decay: 0.5, gain: 0.7 * gain });
-    noise(cue, { filter: 'lowpass', frequency: 2200, endFrequency: 400, decay: 0.35, gain: 0.5 * gain, wet: 0.3 });
+    noise(cue, {
+      filter: 'lowpass',
+      frequency: 2200,
+      endFrequency: 400,
+      decay: 0.35,
+      gain: 0.5 * gain,
+      wet: 0.3,
+    });
     for (let i = 0; i < 46; i += 1) {
       noise(
         cue,

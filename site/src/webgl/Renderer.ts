@@ -25,7 +25,7 @@ export class Renderer {
     this.gl.outputColorSpace = THREE.LinearSRGBColorSpace;
     this.gl.toneMapping = THREE.NoToneMapping;
     this.gl.shadowMap.enabled = true;
-    this.gl.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.gl.shadowMap.type = THREE.PCFShadowMap;
     this.gl.shadowMap.autoUpdate = false;
     this.gl.setClearColor(0x000000, 1);
     this.adaptive = new AdaptiveResolution(quality, viewport.size.pixelRatio);

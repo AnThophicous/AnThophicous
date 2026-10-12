@@ -75,7 +75,11 @@ export function sunDirection(preset: AtmospherePreset, target = new THREE.Vector
   const elevation = THREE.MathUtils.degToRad(preset.sunElevation);
   const azimuth = THREE.MathUtils.degToRad(preset.sunAzimuth);
   return target
-    .set(Math.sin(azimuth) * Math.cos(elevation), Math.sin(elevation), -Math.cos(azimuth) * Math.cos(elevation))
+    .set(
+      Math.sin(azimuth) * Math.cos(elevation),
+      Math.sin(elevation),
+      -Math.cos(azimuth) * Math.cos(elevation),
+    )
     .normalize();
 }
 

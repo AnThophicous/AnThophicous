@@ -3,7 +3,7 @@ import { seededRandom } from '@/core/math';
 
 const FIELD_SIZE = 26;
 
-const vertexShader = /* glsl */ `
+const vertexShader = `
   attribute float aSize;
   uniform float uTime;
   uniform float uField;
@@ -22,7 +22,7 @@ const vertexShader = /* glsl */ `
   }
 `;
 
-const fragmentShader = /* glsl */ `
+const fragmentShader = `
   uniform float uIntensity;
   varying float vFade;
 

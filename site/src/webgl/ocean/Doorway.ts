@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-const glowFragment = /* glsl */ `
+const glowFragment = `
   uniform float uIntensity;
   varying vec2 vUv;
 
@@ -11,7 +11,7 @@ const glowFragment = /* glsl */ `
   }
 `;
 
-const panelFragment = /* glsl */ `
+const panelFragment = `
   uniform float uIntensity;
   varying vec2 vUv;
 
@@ -22,7 +22,7 @@ const panelFragment = /* glsl */ `
   }
 `;
 
-const vertexShader = /* glsl */ `
+const vertexShader = `
   varying vec2 vUv;
 
   void main() {
@@ -37,7 +37,11 @@ export class Doorway {
   private readonly glow: THREE.ShaderMaterial;
 
   constructor() {
-    this.panel = new THREE.ShaderMaterial({ vertexShader, fragmentShader: panelFragment, uniforms: { uIntensity: { value: 0 } } });
+    this.panel = new THREE.ShaderMaterial({
+      vertexShader,
+      fragmentShader: panelFragment,
+      uniforms: { uIntensity: { value: 0 } },
+    });
     this.glow = new THREE.ShaderMaterial({
       vertexShader,
       fragmentShader: glowFragment,

@@ -15,12 +15,36 @@ interface FaceFrame {
 }
 
 const FACES: Record<FaceName, FaceFrame> = {
-  pz: { normal: new THREE.Vector3(0, 0, 1), right: new THREE.Vector3(1, 0, 0), up: new THREE.Vector3(0, 1, 0) },
-  nz: { normal: new THREE.Vector3(0, 0, -1), right: new THREE.Vector3(-1, 0, 0), up: new THREE.Vector3(0, 1, 0) },
-  px: { normal: new THREE.Vector3(1, 0, 0), right: new THREE.Vector3(0, 0, -1), up: new THREE.Vector3(0, 1, 0) },
-  nx: { normal: new THREE.Vector3(-1, 0, 0), right: new THREE.Vector3(0, 0, 1), up: new THREE.Vector3(0, 1, 0) },
-  py: { normal: new THREE.Vector3(0, 1, 0), right: new THREE.Vector3(1, 0, 0), up: new THREE.Vector3(0, 0, -1) },
-  ny: { normal: new THREE.Vector3(0, -1, 0), right: new THREE.Vector3(1, 0, 0), up: new THREE.Vector3(0, 0, 1) },
+  pz: {
+    normal: new THREE.Vector3(0, 0, 1),
+    right: new THREE.Vector3(1, 0, 0),
+    up: new THREE.Vector3(0, 1, 0),
+  },
+  nz: {
+    normal: new THREE.Vector3(0, 0, -1),
+    right: new THREE.Vector3(-1, 0, 0),
+    up: new THREE.Vector3(0, 1, 0),
+  },
+  px: {
+    normal: new THREE.Vector3(1, 0, 0),
+    right: new THREE.Vector3(0, 0, -1),
+    up: new THREE.Vector3(0, 1, 0),
+  },
+  nx: {
+    normal: new THREE.Vector3(-1, 0, 0),
+    right: new THREE.Vector3(0, 0, 1),
+    up: new THREE.Vector3(0, 1, 0),
+  },
+  py: {
+    normal: new THREE.Vector3(0, 1, 0),
+    right: new THREE.Vector3(1, 0, 0),
+    up: new THREE.Vector3(0, 0, -1),
+  },
+  ny: {
+    normal: new THREE.Vector3(0, -1, 0),
+    right: new THREE.Vector3(1, 0, 0),
+    up: new THREE.Vector3(0, 0, 1),
+  },
 };
 
 class FaceBuilder {
@@ -30,7 +54,9 @@ class FaceBuilder {
   private readonly indices: number[] = [];
 
   addBox(center: THREE.Vector3, size: THREE.Vector3, faces: Partial<Record<FaceName, FaceUv>>): void {
-    (Object.keys(faces) as FaceName[]).forEach((name) => this.addFace(center, size, FACES[name], faces[name]!));
+    (Object.keys(faces) as FaceName[]).forEach((name) =>
+      this.addFace(center, size, FACES[name], faces[name]!),
+    );
   }
 
   build(): THREE.BufferGeometry {
@@ -86,23 +112,35 @@ export function createBookGeometry(ratio: number, dimensions: BookDimensions): T
   const atlas = layoutAtlas(ratio);
   const edge: FaceUv = { rect: atlas.edge };
   const builder = new FaceBuilder();
-  builder.addBox(new THREE.Vector3(0, 0, thickness / 2 - BOARD / 2), new THREE.Vector3(width, height, BOARD), {
-    pz: { rect: atlas.front },
-    px: edge,
-    py: edge,
-    ny: edge,
-  });
-  builder.addBox(new THREE.Vector3(0, 0, -thickness / 2 + BOARD / 2), new THREE.Vector3(width, height, BOARD), {
-    nz: { rect: atlas.back },
-    px: edge,
-    py: edge,
-    ny: edge,
-  });
-  builder.addBox(new THREE.Vector3(-width / 2 + BOARD / 2, 0, 0), new THREE.Vector3(BOARD, height, thickness), {
-    nx: { rect: atlas.spine, rotate: true },
-    py: edge,
-    ny: edge,
-  });
+  builder.addBox(
+    new THREE.Vector3(0, 0, thickness / 2 - BOARD / 2),
+    new THREE.Vector3(width, height, BOARD),
+    {
+      pz: { rect: atlas.front },
+      px: edge,
+      py: edge,
+      ny: edge,
+    },
+  );
+  builder.addBox(
+    new THREE.Vector3(0, 0, -thickness / 2 + BOARD / 2),
+    new THREE.Vector3(width, height, BOARD),
+    {
+      nz: { rect: atlas.back },
+      px: edge,
+      py: edge,
+      ny: edge,
+    },
+  );
+  builder.addBox(
+    new THREE.Vector3(-width / 2 + BOARD / 2, 0, 0),
+    new THREE.Vector3(BOARD, height, thickness),
+    {
+      nx: { rect: atlas.spine, rotate: true },
+      py: edge,
+      ny: edge,
+    },
+  );
   const blockWidth = width - BOARD - INSET;
   builder.addBox(
     new THREE.Vector3(-width / 2 + BOARD + blockWidth / 2, 0, 0),

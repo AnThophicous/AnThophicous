@@ -110,7 +110,11 @@ export class SoundEngine implements CueContext {
     ease(this.riserGain.gain, params.tension * params.tension * 0.07);
     ease(this.riserFilter.frequency, 300 + params.tension * 4200, 0.9);
     ease(this.padFilter.frequency, 520 + params.tension * 1600 + params.shimmer * 600, 0.9);
-    ease(this.muffle.frequency, OPEN_FILTER * Math.pow(MUFFLED_FILTER / OPEN_FILTER, params.underwater), 0.35);
+    ease(
+      this.muffle.frequency,
+      OPEN_FILTER * Math.pow(MUFFLED_FILTER / OPEN_FILTER, params.underwater),
+      0.35,
+    );
     ease(this.duck.gain, 1 - params.silence, params.silence > 0.5 ? 0.04 : 0.6);
     const wasTense = this.tension > 0.5;
     this.tension = params.tension;

@@ -59,7 +59,8 @@ export class HorizonLine {
       this.accumulator -= STEP;
     }
     this.ripples.forEach((ripple) => (ripple.age += delta));
-    while (this.ripples.length && this.ripples[this.ripples.length - 1]!.age > RIPPLE_LIFETIME) this.ripples.pop();
+    while (this.ripples.length && this.ripples[this.ripples.length - 1]!.age > RIPPLE_LIFETIME)
+      this.ripples.pop();
     return crossed;
   }
 
@@ -74,7 +75,9 @@ export class HorizonLine {
 
   private step(input: HorizonInput): void {
     const { samples, velocities, count } = this;
-    const proximity = input.active ? 1 - smoothstep(GRAB_RADIUS * 0.35, GRAB_RADIUS, Math.abs(input.offset)) : 0;
+    const proximity = input.active
+      ? 1 - smoothstep(GRAB_RADIUS * 0.35, GRAB_RADIUS, Math.abs(input.offset))
+      : 0;
     for (let i = 0; i < count; i += 1) {
       const left = samples[Math.max(0, i - 1)]!;
       const right = samples[Math.min(count - 1, i + 1)]!;

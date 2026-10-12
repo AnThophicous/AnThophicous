@@ -21,10 +21,18 @@ export const SWELL: readonly Wave[] = [
 ];
 
 export function packWaves(waves: readonly Wave[]): THREE.Vector4[] {
-  return waves.map((wave) => new THREE.Vector4(wave.directionX, wave.directionZ, wave.steepness, wave.wavelength));
+  return waves.map(
+    (wave) => new THREE.Vector4(wave.directionX, wave.directionZ, wave.steepness, wave.wavelength),
+  );
 }
 
-export function waveHeight(waves: readonly Wave[], x: number, z: number, time: number, scale: number): number {
+export function waveHeight(
+  waves: readonly Wave[],
+  x: number,
+  z: number,
+  time: number,
+  scale: number,
+): number {
   let height = 0;
   for (const wave of waves) {
     const length = Math.hypot(wave.directionX, wave.directionZ);

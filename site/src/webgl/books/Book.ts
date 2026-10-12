@@ -16,13 +16,13 @@ export function createCausticUniforms(): CausticUniforms {
   return { uCausticTime: { value: 0 }, uCausticStrength: { value: 0 } };
 }
 
-const CAUSTIC_VERTEX = /* glsl */ `
+const CAUSTIC_VERTEX = `
   #include <project_vertex>
   vCausticWorld = (modelMatrix * vec4(transformed, 1.0)).xyz;
   vCausticNormal = normalize(mat3(modelMatrix) * objectNormal);
 `;
 
-const CAUSTIC_FRAGMENT = /* glsl */ `
+const CAUSTIC_FRAGMENT = `
   float causticAt(vec2 p, float time) {
     vec2 i = p;
     float c = 1.0;
@@ -64,7 +64,10 @@ export class Book {
     material.onBeforeCompile = (shader) => {
       Object.assign(shader.uniforms, caustics);
       shader.vertexShader = shader.vertexShader
-        .replace('#include <common>', '#include <common>\nvarying vec3 vCausticWorld;\nvarying vec3 vCausticNormal;')
+        .replace(
+          '#include <common>',
+          '#include <common>\nvarying vec3 vCausticWorld;\nvarying vec3 vCausticNormal;',
+        )
         .replace('#include <project_vertex>', CAUSTIC_VERTEX);
       shader.fragmentShader = shader.fragmentShader
         .replace(
@@ -78,7 +81,11 @@ export class Book {
     };
     const width = BASE_WIDTH;
     this.mesh = new THREE.Mesh(
-      createBookGeometry(entry.ratio, { width, height: width / entry.ratio, thickness: 0.08 + entry.thickness * 0.1 }),
+      createBookGeometry(entry.ratio, {
+        width,
+        height: width / entry.ratio,
+        thickness: 0.08 + entry.thickness * 0.1,
+      }),
       material,
     );
     this.mesh.visible = false;

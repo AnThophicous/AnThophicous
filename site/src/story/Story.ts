@@ -87,7 +87,9 @@ export class Story {
       if (spec.kind === 'pinned') {
         section.height = spec.length * vh;
         const closedGate = spec.gate && !this.openGates.has(spec.gate.id) ? spec.gate : null;
-        element.style.height = closedGate ? `${section.height * closedGate.at + vh}px` : `${section.height}px`;
+        element.style.height = closedGate
+          ? `${section.height * closedGate.at + vh}px`
+          : `${section.height}px`;
         gated = closedGate !== null;
       } else {
         section.height = element.offsetHeight;

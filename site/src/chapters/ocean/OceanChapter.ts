@@ -55,9 +55,14 @@ export class OceanChapter implements Chapter {
   }
 
   async prepare(): Promise<void> {
-    await Promise.all(['400 1em "Impostor Pro"', '500 1em "Impostor Pro"'].map((face) => document.fonts.load(face)));
+    await Promise.all(
+      ['400 1em "Impostor Pro"', '500 1em "Impostor Pro"'].map((face) => document.fonts.load(face)),
+    );
     const { quality, renderer } = this.context;
-    this.shoal = new BookShoal(quality.tier === 'low' ? 1024 : 2048, renderer.gl.capabilities.getMaxAnisotropy());
+    this.shoal = new BookShoal(
+      quality.tier === 'low' ? 1024 : 2048,
+      renderer.gl.capabilities.getMaxAnisotropy(),
+    );
     this.shoal.grabbed.on(() => this.context.sound.cue('page'));
     this.shoal.released.on(() => this.context.sound.cue('bubbles', { gain: 0.4 }));
     this.shoal.opened.on((book) => {
@@ -104,7 +109,12 @@ export class OceanChapter implements Chapter {
     if (!this.booksInteractive || !this.shoal) return;
     if (!(event.target instanceof HTMLCanvasElement)) return;
     const { width, height } = this.context.viewport.size;
-    this.shoal.pointAt((event.clientX / width) * 2 - 1, -(event.clientY / height) * 2 + 1, this.view.camera, true);
+    this.shoal.pointAt(
+      (event.clientX / width) * 2 - 1,
+      -(event.clientY / height) * 2 + 1,
+      this.view.camera,
+      true,
+    );
     if (this.shoal.press(event.clientX, event.clientY, this.view.camera)) this.context.scroll.lock();
   };
 
@@ -122,7 +132,12 @@ export class OceanChapter implements Chapter {
       this.scattered = true;
       shoal.scatterAround(camera);
     }
-    shoal.pointAt(frame.pointer.normalizedX, frame.pointer.normalizedY, camera, this.booksInteractive && frame.pointer.isActive);
+    shoal.pointAt(
+      frame.pointer.normalizedX,
+      frame.pointer.normalizedY,
+      camera,
+      this.booksInteractive && frame.pointer.isActive,
+    );
     const recycle = this.view.isUnderwater && progress > RECYCLE_FROM && progress < RECYCLE_UNTIL;
     const time = frame.time;
     shoal.update(time, frame.delta, camera, (x, z) => this.view.waterHeightAt(x, z, time), recycle);
@@ -162,7 +177,8 @@ export class OceanChapter implements Chapter {
     camera.position.copy(position);
     camera.position.y += water * BOB_STRENGTH * surfaceWeight;
     const slope =
-      this.view.waterHeightAt(position.x + 1.5, position.z, time) - this.view.waterHeightAt(position.x - 1.5, position.z, time);
+      this.view.waterHeightAt(position.x + 1.5, position.z, time) -
+      this.view.waterHeightAt(position.x - 1.5, position.z, time);
     const roll = slope * 0.05 * surfaceWeight * freedom;
     this.euler.set(
       pitch + this.lookY * THREE.MathUtils.degToRad(2.5),
@@ -228,7 +244,8 @@ export class OceanChapter implements Chapter {
     output.post.contrast = under ? 1.15 : 1.05;
     output.post.vignette = under ? 0.45 : 0.28;
     output.post.grain = 0.07;
-    output.post.waterline = Math.abs(relative) < WATERLINE_BAND ? clamp(0.5 - relative / (WATERLINE_BAND * 2)) : -1;
+    output.post.waterline =
+      Math.abs(relative) < WATERLINE_BAND ? clamp(0.5 - relative / (WATERLINE_BAND * 2)) : -1;
     output.post.fade = smoothstep(OCEAN_TIMING.fadeStart, 1, progress);
     output.post.fadeTone = 1;
     output.post.toneMapping = 1 - smoothstep(0.9, 1, progress);

@@ -1,6 +1,10 @@
 export type NoiseColor = 'white' | 'pink' | 'brown';
 
-export function createNoiseBuffer(context: BaseAudioContext, color: NoiseColor, seconds: number): AudioBuffer {
+export function createNoiseBuffer(
+  context: BaseAudioContext,
+  color: NoiseColor,
+  seconds: number,
+): AudioBuffer {
   const length = Math.floor(context.sampleRate * seconds);
   const buffer = context.createBuffer(2, length, context.sampleRate);
   for (let channel = 0; channel < 2; channel += 1) {

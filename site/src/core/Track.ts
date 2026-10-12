@@ -33,7 +33,10 @@ export class Track {
   private computeTangents(): number[] {
     const { times, values } = this;
     const count = times.length;
-    const slopes = Array.from({ length: count - 1 }, (_, i) => (values[i + 1]! - values[i]!) / (times[i + 1]! - times[i]!));
+    const slopes = Array.from(
+      { length: count - 1 },
+      (_, i) => (values[i + 1]! - values[i]!) / (times[i + 1]! - times[i]!),
+    );
     const tangents = Array.from({ length: count }, (_, i) => {
       if (i === 0) return slopes[0] ?? 0;
       if (i === count - 1) return slopes[count - 2] ?? 0;

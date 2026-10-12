@@ -52,7 +52,8 @@ export class Cursor {
   }
 
   private readonly handleOver = (event: PointerEvent): void => {
-    const target = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-cursor]') : null;
+    const target =
+      event.target instanceof Element ? event.target.closest<HTMLElement>('[data-cursor]') : null;
     this.domLabel = target?.dataset.cursor ?? null;
   };
 }

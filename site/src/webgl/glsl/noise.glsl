@@ -1,3 +1,6 @@
+#ifndef SHARED_NOISE
+#define SHARED_NOISE
+
 float hash12(vec2 p) {
   vec3 p3 = fract(vec3(p.xyx) * 0.1031);
   p3 += dot(p3, p3.yzx + 33.33);
@@ -61,3 +64,5 @@ float fbm3(vec3 p) {
   }
   return sum;
 }
+
+#endif

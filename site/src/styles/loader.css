@@ -4,7 +4,9 @@
   z-index: 50;
   background: var(--white);
   color: var(--black);
-  transition: opacity 1s var(--ease-out), visibility 1s;
+  transition:
+    opacity 1s var(--ease-out),
+    visibility 1s;
 }
 
 body.is-loaded .loader {
