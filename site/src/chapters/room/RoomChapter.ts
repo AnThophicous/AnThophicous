@@ -52,6 +52,8 @@ export class RoomChapter implements Chapter {
   private time = 0;
   private nextStep = 0;
   private typingSoundAt = 0;
+  private booted = false;
+  private dived = false;
   private parallaxX = 0;
   private parallaxY = 0;
 
@@ -106,6 +108,7 @@ export class RoomChapter implements Chapter {
     this.updateDissolve(progress, frame.time);
     this.updateGate(progress, frame);
     this.playCues(sceneTime);
+    this.playDiveCue(progress);
     this.beats.update(progress);
     this.mix(progress, sceneTime);
     this.writeOutput(progress, output);
@@ -224,6 +227,12 @@ export class RoomChapter implements Chapter {
     this.marker.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0)`;
   }
 
+  private playDiveCue(progress: number): void {
+    const diving = progress > DIVE_START + 0.04;
+    if (diving && !this.dived) this.context.sound.cue('whoosh', { gain: 0.9 });
+    this.dived = diving;
+  }
+
   private playCues(sceneTime: number): void {
     const { sound } = this.context;
     if (this.startedAt === null) return;
@@ -233,7 +242,9 @@ export class RoomChapter implements Chapter {
       });
       this.nextStep = sceneTime + CUTSCENE.stepInterval;
     }
-    if (this.cutscene.screenTime >= 0 && this.cutscene.screenTime < 0.05) sound.cue('boot');
+    const booted = this.cutscene.screenTime >= 0;
+    if (booted && !this.booted) sound.cue('boot');
+    this.booted = booted;
     if (this.cutscene.typing > 0.5 && sceneTime >= this.typingSoundAt && sceneTime < CUTSCENE.duration) {
       sound.cue('keys', { gain: 0.6 });
       this.typingSoundAt = sceneTime + 2.6;
@@ -252,6 +263,7 @@ export class RoomChapter implements Chapter {
       tension: 0,
       room: (1 - vanish) * (sceneTime > CUTSCENE.bootAt ? 1 : 0.7),
       pulse: 0,
+      motion: 0,
       silence: 0,
     });
   }

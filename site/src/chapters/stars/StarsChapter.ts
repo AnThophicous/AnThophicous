@@ -255,6 +255,7 @@ export class StarsChapter implements Chapter {
       tension: 0.25 * (1 - arrival),
       room: 0,
       pulse: 0.2,
+      motion: 0.35 * arrival,
       silence: 1 - arrival,
     });
   }

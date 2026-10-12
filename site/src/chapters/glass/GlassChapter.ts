@@ -123,6 +123,7 @@ export class GlassChapter implements Chapter {
       tension: 0.2,
       room: 0,
       pulse: 0.2 * (1 - stillness),
+      motion: 0.3 * (1 - stillness),
       silence: stillness,
     });
   }

@@ -92,6 +92,7 @@ export class ArchiveChapter implements Chapter {
       tension: 0,
       room: 0,
       pulse: 0,
+      motion: 0,
       silence: 0,
     });
     output.post.toneMapping = 1;

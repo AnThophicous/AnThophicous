@@ -94,6 +94,7 @@ export class IdentityChapter implements Chapter {
       tension: 0,
       room: 0,
       pulse: 0,
+      motion: 0.2 * arrival,
       silence: 1 - arrival,
     });
   }

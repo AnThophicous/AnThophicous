@@ -4,8 +4,12 @@ import { CALM_PROGRESSION, TENSE_PROGRESSION, midiToFrequency } from './music';
 import type { Cue, CueOptions, MixParams } from './SoundScape';
 
 const MIX_TIME_CONSTANT = 0.5;
+const MIX_EPSILON = 0.002;
 const CHORD_SECONDS = 9;
 const HEARTBEAT_SECONDS = 1.05;
+const ARP_STEP = 0.32;
+const ARP_LOOKAHEAD = 0.3;
+const ARP_PATTERN = [0, 2, 1, 3, 2, 4, 3, 1] as const;
 const OPEN_FILTER = 20000;
 const MUFFLED_FILTER = 360;
 
@@ -34,9 +38,13 @@ export class SoundEngine implements CueContext {
   private readonly riserGain: GainNode;
   private readonly riserFilter: BiquadFilterNode;
   private readonly padVoices: PadVoice[] = [];
+  private readonly scheduled = new Map<AudioParam, number>();
   private chordIndex = 0;
   private tension = 0;
   private pulse = 0;
+  private motion = 0;
+  private nextArp = 0;
+  private arpIndex = 0;
 
   constructor() {
     this.context = new AudioContext({ latencyHint: 'playback' });
@@ -86,6 +94,7 @@ export class SoundEngine implements CueContext {
     this.riserGain = this.buildRiser();
     window.setInterval(() => this.advanceChord(), CHORD_SECONDS * 1000);
     window.setInterval(() => this.beat(), HEARTBEAT_SECONDS * 1000);
+    window.setInterval(() => this.scheduleArpeggio(), 100);
   }
 
   async resume(): Promise<void> {
@@ -99,6 +108,10 @@ export class SoundEngine implements CueContext {
   mix(params: MixParams): void {
     const now = this.context.currentTime;
     const ease = (param: AudioParam, value: number, constant = MIX_TIME_CONSTANT): void => {
+      const previous = this.scheduled.get(param);
+      if (previous !== undefined && Math.abs(previous - value) < MIX_EPSILON * Math.max(1, Math.abs(value)))
+        return;
+      this.scheduled.set(param, value);
       param.setTargetAtTime(value, now, constant);
     };
     ease(this.airGain.gain, params.air * 0.05);
@@ -119,6 +132,7 @@ export class SoundEngine implements CueContext {
     const wasTense = this.tension > 0.5;
     this.tension = params.tension;
     this.pulse = params.pulse;
+    this.motion = params.motion;
     if (wasTense !== this.tension > 0.5) this.applyChord(0.8);
   }
 
@@ -289,5 +303,45 @@ export class SoundEngine implements CueContext {
 
   private beat(): void {
     if (this.pulse > 0.02) playCue(this, 'heartbeat', { gain: this.pulse });
+  }
+
+  private scheduleArpeggio(): void {
+    const now = this.context.currentTime;
+    if (this.motion < 0.02) {
+      this.nextArp = now + 0.05;
+      return;
+    }
+    this.nextArp = Math.max(this.nextArp, now);
+    while (this.nextArp < now + ARP_LOOKAHEAD) {
+      this.pluck(this.nextArp);
+      this.nextArp += ARP_STEP * (this.tension > 0.75 ? 0.5 : 1);
+    }
+  }
+
+  private pluck(at: number): void {
+    const progression = this.tension > 0.5 ? TENSE_PROGRESSION : CALM_PROGRESSION;
+    const chord = progression[this.chordIndex % progression.length]!;
+    const degree = ARP_PATTERN[this.arpIndex % ARP_PATTERN.length]!;
+    const octave = 12 + 12 * (Math.floor(this.arpIndex / ARP_PATTERN.length) % 2);
+    const frequency = midiToFrequency(chord[degree % chord.length]! + octave);
+    this.arpIndex += 1;
+    const level = 0.05 * this.motion * (0.7 + Math.random() * 0.3);
+    const voice = this.gain(0);
+    voice.gain.setValueAtTime(0.0001, at);
+    voice.gain.exponentialRampToValueAtTime(level, at + 0.006);
+    voice.gain.exponentialRampToValueAtTime(0.0001, at + 1.4);
+    voice.connect(this.musicBus);
+    voice.connect(this.reverbSend);
+    [
+      { type: 'triangle' as OscillatorType, ratio: 1, amount: 1 },
+      { type: 'sine' as OscillatorType, ratio: 2, amount: 0.35 },
+    ].forEach(({ type, ratio, amount }) => {
+      const oscillator = this.context.createOscillator();
+      oscillator.type = type;
+      oscillator.frequency.value = frequency * ratio;
+      oscillator.connect(this.gain(amount)).connect(voice);
+      oscillator.start(at);
+      oscillator.stop(at + 1.5);
+    });
   }
 }

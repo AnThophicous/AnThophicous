@@ -212,6 +212,7 @@ export class HelloChapter implements Chapter {
       tension: fall,
       room: 0,
       pulse: smoothstep(0.84, 1, progress) * 0.8,
+      motion: 0.25 * (1 - fall),
       silence: 0,
     });
   }

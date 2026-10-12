@@ -147,6 +147,7 @@ export class EndingChapter implements Chapter {
       tension: 0,
       room: 0,
       pulse: 0,
+      motion: under ? 0 : 0.15 * (1 - close),
       silence: 0,
     });
   }

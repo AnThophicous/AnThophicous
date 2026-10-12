@@ -116,6 +116,7 @@ export class HorizonChapter implements Chapter {
       tension: 0.6 + peak * 0.4,
       room: 0,
       pulse: 0.6 + peak * 0.4,
+      motion: 0.45 + peak * 0.55,
       silence: after,
     });
   }

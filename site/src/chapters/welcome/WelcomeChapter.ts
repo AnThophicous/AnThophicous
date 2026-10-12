@@ -72,7 +72,19 @@ export class WelcomeChapter implements Chapter {
     this.dive.setVisible(progress > GATE_REVEAL);
     this.dive.update(frame.delta, frame.pointer);
     this.updateLine(frame);
-    this.context.sound.mix({ air: 1, waves: 0.08 + progress * 0.12, pad: 0.15, underwater: 0, depth: 0 });
+    this.context.sound.mix({
+      air: 1,
+      waves: 0.08 + progress * 0.12,
+      underwater: 0,
+      depth: 0,
+      pad: 0.15,
+      tension: 0,
+      shimmer: 0,
+      pulse: 0,
+      motion: 0,
+      room: 0,
+      silence: 0,
+    });
     output.post.toneMapping = 0;
     output.post.vignette = 0;
     output.post.grain = 0.035;

@@ -7,6 +7,7 @@ export interface MixParams {
   tension: number;
   shimmer: number;
   pulse: number;
+  motion: number;
   room: number;
   silence: number;
 }
@@ -52,6 +53,7 @@ export const SILENT_MIX: Readonly<MixParams> = {
   tension: 0,
   shimmer: 0,
   pulse: 0,
+  motion: 0,
   room: 0,
   silence: 0,
 };
