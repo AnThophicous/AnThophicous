@@ -1,4 +1,5 @@
 import type { BeatSpec } from '@/ui/Beats';
+import type { MagnifyRowSpec } from '@/ui/MagnifyText';
 
 export const WELCOME_BEATS: BeatSpec[] = [
   { text: 'Welcome.', start: 0, end: 0.15, variant: 'display', place: 'sky', holdIn: true },
@@ -75,14 +76,23 @@ export const ROOM_BEATS: BeatSpec[] = [
   },
 ];
 
-export const HELLO_LINES = [
-  'Hi. Welcome.',
-  "You're a little late,",
-  'but I know you came\nto know me better.',
-  "I'm glad you did.",
-] as const;
+export const HELLO_ROWS: readonly MagnifyRowSpec[] = [
+  { text: 'Hi. Welcome.', size: 'hero' },
+  { text: 'You’re a little late,', size: 'lead' },
+  { text: 'but I can tell you want', size: 'lead' },
+  { text: 'to know more about me.', size: 'lead' },
+  { text: 'I like that.', size: 'lead' },
+];
 
-export const FALL_LINES = ['If you really want to know me,', "you'll have to fall in."] as const;
+export const FALL_ROWS: readonly MagnifyRowSpec[] = [
+  { text: 'If you really want to know me,', size: 'lead' },
+  { text: 'you’ll have to fall in.', size: 'hero' },
+];
+
+export const HELLO_HINT = {
+  pointer: 'Move closer. The words are listening.',
+  touch: 'Touch the words. They are listening.',
+} as const;
 
 export const HORIZON_BEATS: BeatSpec[] = [
   { text: 'An event horizon.', start: 0.08, end: 0.22, variant: 'caption', place: 'top' },
