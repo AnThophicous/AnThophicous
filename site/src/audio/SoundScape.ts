@@ -13,6 +13,7 @@ export interface MixParams {
 
 export type Cue =
   | 'tick'
+  | 'drip'
   | 'hover'
   | 'press'
   | 'splash'
@@ -37,6 +38,7 @@ export interface CueOptions {
 
 export interface SoundScape {
   readonly enabled: boolean;
+  setEnabled(on: boolean): Promise<void>;
   mix(params: Partial<MixParams>): void;
   cue(name: Cue, options?: CueOptions): void;
 }

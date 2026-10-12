@@ -1,7 +1,7 @@
 import { clamp, easeInCubic, easeOutCubic, progressBetween } from '@/core/math';
 
 export type BeatVariant = 'display' | 'title' | 'lead' | 'caption';
-export type BeatPlacement = 'center' | 'sky' | 'sea' | 'top' | 'bottom';
+export type BeatPlacement = 'center' | 'sky' | 'sea' | 'gate' | 'top' | 'bottom';
 
 export interface BeatSpec {
   text: string;
@@ -48,7 +48,7 @@ export class Beats {
     const visible = (holdIn || progress >= start) && (holdOut || progress <= end);
     if (visible !== node.visible) {
       node.visible = visible;
-      node.element.style.visibility = visible ? 'visible' : 'hidden';
+      node.element.hidden = !visible;
     }
     if (!visible) return;
     const enter = holdIn ? 1 : progressBetween(start, start + transition, progress);
@@ -68,7 +68,7 @@ export class Beats {
     element.className = `beat beat--${spec.variant ?? 'title'}`;
     element.dataset.place = spec.place ?? 'center';
     element.dataset.align = spec.align ?? 'center';
-    element.style.visibility = 'hidden';
+    element.hidden = true;
     const words: HTMLElement[] = [];
     spec.text.split('\n').forEach((line, lineIndex) => {
       if (lineIndex > 0) element.append(document.createElement('br'));

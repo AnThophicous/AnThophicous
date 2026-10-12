@@ -72,6 +72,14 @@ export class Experience {
     await this.loader.finish();
     document.body.classList.add('is-ready');
     this.scroll.unlock();
+    this.followDeepLink();
+  }
+
+  private followDeepLink(): void {
+    const [id, progress] = window.location.hash.slice(1).split('/');
+    const section = SECTIONS.find((spec) => spec.id === id);
+    if (!section) return;
+    this.story.goTo(section.id, Number(progress) || 0.02, true);
   }
 
   private readonly tick = ({ time, delta }: { time: number; delta: number }): void => {

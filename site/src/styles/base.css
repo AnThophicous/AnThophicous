@@ -88,29 +88,36 @@ a {
 }
 
 .stage {
-  position: fixed;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
+  display: contents;
 }
 
 .layer {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  visibility: hidden;
+  pointer-events: none;
+  display: none;
 }
 
 .layer.is-active {
-  visibility: visible;
+  display: block;
+}
+
+body[data-theme='light'] .layer {
+  color: var(--black);
+}
+
+body[data-theme='dark'] .layer {
+  color: var(--white);
 }
 
 .story {
   position: relative;
   z-index: 1;
+  pointer-events: none;
 }
 
-.spacer {
-  pointer-events: none;
+.archive {
+  pointer-events: auto;
 }
 
 .spacer[hidden],

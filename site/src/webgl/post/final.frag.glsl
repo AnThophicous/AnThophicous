@@ -15,6 +15,7 @@ uniform float uFade;
 uniform float uFadeTone;
 uniform float uInvert;
 uniform float uFlash;
+uniform float uWaterline;
 
 varying vec2 vUv;
 
@@ -55,8 +56,20 @@ vec3 sampleScene(vec2 uv) {
   return color / 10.0;
 }
 
+float waterlineShade(vec2 uv, inout vec2 sampleUv) {
+  if (uWaterline < -0.5) return 1.0;
+  float wobble = sin(uv.x * 23.0 + uTime * 5.0) * 0.012 + sin(uv.x * 61.0 - uTime * 9.0) * 0.004;
+  float offset = uv.y - (uWaterline + wobble);
+  float submerged = smoothstep(0.004, -0.004, offset);
+  sampleUv += vec2(sin(uv.y * 40.0 + uTime * 4.0) * 0.004, 0.0) * submerged;
+  float meniscus = exp(-offset * offset / 0.00004);
+  return mix(1.0, 0.5, submerged) + meniscus * 0.8;
+}
+
 void main() {
-  vec3 hdr = sampleScene(vUv) * uExposure;
+  vec2 sampleUv = vUv;
+  float waterline = waterlineShade(vUv, sampleUv);
+  vec3 hdr = sampleScene(sampleUv) * uExposure * waterline;
   vec3 mapped = mix(clamp(hdr, 0.0, 1.0), acesFilm(hdr), uToneMapping);
   float luminance = dot(mapped, LUMA);
   luminance = toSrgb(clamp(luminance, 0.0, 1.0));

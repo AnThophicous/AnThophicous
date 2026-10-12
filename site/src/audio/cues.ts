@@ -88,6 +88,10 @@ const random = (min: number, max: number): number => min + Math.random() * (max 
 
 const CUES: Record<Cue, (cue: CueContext, gain: number, options: CueOptions) => void> = {
   tick: (cue, gain) => noise(cue, { filter: 'bandpass', frequency: 4600, q: 2.2, decay: 0.03, gain: 0.22 * gain }),
+  drip: (cue, gain, options) => {
+    const frequency = random(900, 1400) * Math.pow(2, (options.pitch ?? 0) / 12);
+    tone(cue, { frequency, endFrequency: frequency * 2.4, attack: 0.002, decay: 0.09, gain: 0.07 * gain, wet: 0.7 }, options.pan ?? 0);
+  },
   hover: (cue, gain) =>
     tone(cue, { frequency: 2300, endFrequency: 1750, decay: 0.05, gain: 0.025 * gain, attack: 0.004 }),
   press: (cue, gain) => {

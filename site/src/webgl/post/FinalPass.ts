@@ -16,6 +16,7 @@ export interface PostSettings {
   fadeTone: number;
   invert: number;
   flash: number;
+  waterline: number;
 }
 
 export const DEFAULT_POST: Readonly<PostSettings> = {
@@ -32,6 +33,7 @@ export const DEFAULT_POST: Readonly<PostSettings> = {
   fadeTone: 1,
   invert: 0,
   flash: 0,
+  waterline: -1,
 };
 
 export function createFullscreenTriangle(): THREE.BufferGeometry {
@@ -67,6 +69,7 @@ export class FinalPass {
         uFadeTone: { value: 1 },
         uInvert: { value: 0 },
         uFlash: { value: 0 },
+        uWaterline: { value: -1 },
       },
     });
     const triangle = new THREE.Mesh(createFullscreenTriangle(), this.material);
@@ -94,6 +97,7 @@ export class FinalPass {
     u.uFadeTone!.value = settings.fadeTone;
     u.uInvert!.value = settings.invert;
     u.uFlash!.value = settings.flash;
+    u.uWaterline!.value = settings.waterline;
     renderer.setRenderTarget(null);
     renderer.render(this.scene, this.camera);
   }

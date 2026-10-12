@@ -3,6 +3,10 @@
   inset: 0;
 }
 
+.beat[hidden] {
+  display: none;
+}
+
 .beat {
   position: absolute;
   left: var(--gutter);
@@ -37,6 +41,10 @@
 
 .beat[data-place='sea'] {
   top: calc(50% + clamp(28px, 5vh, 64px));
+}
+
+.beat[data-place='gate'] {
+  bottom: calc(50% + clamp(112px, 10.5vw, 150px) * 0.86 + 34px);
 }
 
 .beat[data-place='top'] {
