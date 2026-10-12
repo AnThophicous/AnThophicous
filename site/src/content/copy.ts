@@ -126,19 +126,20 @@ export const STARS_HINT = {
 } as const;
 
 export const GLASS_BEATS: BeatSpec[] = [
-  { text: 'Look closer.', start: 0.04, end: 0.24, variant: 'title' },
-  { text: "You know, don't you?", start: 0.4, end: 0.78, variant: 'display' },
+  { text: 'Look closer.', start: 0.02, end: 0.14, variant: 'title' },
+  { text: 'You know, don’t you?', start: 0.32, end: 0.78, variant: 'display' },
 ];
 
+export const IDENTITY_NAME = ['Brenno Leon', 'de Souza Amaral'] as const;
+
 export const IDENTITY_BEATS: BeatSpec[] = [
-  { text: 'But this is who I am.', start: 0.22, end: 0.42, variant: 'lead' },
+  { text: 'But this is who I am.', start: 0.05, end: 0.22, variant: 'lead' },
   {
-    text: 'Designer — Web designer — Front-end developer — Motion',
-    start: 0.7,
-    end: 1,
+    text: 'Designer — Web designer — Front-end developer',
+    start: 0.58,
+    end: 0.92,
     variant: 'caption',
     place: 'bottom',
-    holdOut: true,
   },
 ];
 

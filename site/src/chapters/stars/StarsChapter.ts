@@ -118,9 +118,9 @@ export class StarsChapter implements Chapter {
     this.writeOutput(progress, output);
   }
 
-  get cameraState(): { position: THREE.Vector3; quaternion: THREE.Quaternion; fov: number } {
-    const { camera } = this.view;
-    return { position: camera.position, quaternion: camera.quaternion, fov: camera.fov };
+  stage(progress: number, time: number): void {
+    this.placeCamera(progress, time);
+    this.view.update({ time, pixelRatio: this.context.renderer.pixelRatio, reveal: 1, focusGroup: -1 });
   }
 
   private placeCamera(progress: number, time: number): void {
