@@ -95,31 +95,35 @@ export const HELLO_HINT = {
 } as const;
 
 export const HORIZON_BEATS: BeatSpec[] = [
-  { text: 'An event horizon.', start: 0.08, end: 0.22, variant: 'caption', place: 'top' },
+  { text: 'An event horizon.', start: 0.15, end: 0.28, variant: 'caption', place: 'top' },
   {
     text: 'Nothing that crosses it\never comes back the same.',
-    start: 0.22,
-    end: 0.4,
+    start: 0.3,
+    end: 0.45,
     variant: 'lead',
     place: 'bottom',
   },
-  { text: 'Not light.', start: 0.44, end: 0.56, variant: 'title', place: 'bottom' },
-  { text: 'Not time.', start: 0.58, end: 0.7, variant: 'title', place: 'bottom' },
-  { text: 'Not even doubt.', start: 0.72, end: 0.84, variant: 'title', place: 'bottom' },
+  { text: 'Not light.', start: 0.48, end: 0.56, variant: 'title', place: 'bottom' },
+  { text: 'Not time.', start: 0.57, end: 0.65, variant: 'title', place: 'bottom' },
+  { text: 'Not even doubt.', start: 0.66, end: 0.75, variant: 'title', place: 'bottom' },
 ];
 
 export const STARS_BEATS: BeatSpec[] = [
-  { text: "Inside, it isn't empty.", start: 0.04, end: 0.2, variant: 'title' },
-  { text: 'Every star is something I lived.', start: 0.22, end: 0.38, variant: 'title' },
-  { text: 'A year. A book.\nA first line of code.', start: 0.4, end: 0.56, variant: 'lead', place: 'bottom' },
+  { text: 'Inside, it isn’t empty.', start: 0.03, end: 0.13, variant: 'title' },
+  { text: 'Every star is something I lived.', start: 0.14, end: 0.25, variant: 'title' },
   {
-    text: 'Hover the brightest ones. Remember with me.',
-    start: 0.58,
-    end: 0.92,
-    variant: 'caption',
+    text: 'A year. A book.\nA first line of code.',
+    start: 0.26,
+    end: 0.36,
+    variant: 'lead',
     place: 'bottom',
   },
 ];
+
+export const STARS_HINT = {
+  pointer: 'Hover the brightest ones. Remember with me.',
+  touch: 'Tap the brightest ones. Remember with me.',
+} as const;
 
 export const GLASS_BEATS: BeatSpec[] = [
   { text: 'Look closer.', start: 0.04, end: 0.24, variant: 'title' },
