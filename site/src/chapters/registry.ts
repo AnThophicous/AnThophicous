@@ -1,34 +1,35 @@
 import type { Context } from '@/app/Context';
-import { SECTIONS, type SectionId } from '@/story/sections';
+import type { SectionId } from '@/story/sections';
 import { BookCard } from '@/ui/BookCard';
 import { HorizonLine } from '@/webgl/surface/HorizonLine';
+import { ArchiveChapter } from './archive/ArchiveChapter';
 import type { Chapter } from './Chapter';
+import { EndingChapter } from './ending/EndingChapter';
+import { GlassChapter } from './glass/GlassChapter';
 import { HelloChapter } from './hello/HelloChapter';
 import { HorizonChapter } from './horizon/HorizonChapter';
 import { IdentityChapter } from './identity/IdentityChapter';
-import { GlassChapter } from './glass/GlassChapter';
-import { StarsChapter } from './stars/StarsChapter';
 import { OceanChapter } from './ocean/OceanChapter';
-import { PlaceholderChapter } from './PlaceholderChapter';
 import { RoomChapter } from './room/RoomChapter';
+import { StarsChapter } from './stars/StarsChapter';
 import { WelcomeChapter } from './welcome/WelcomeChapter';
 
 export function createChapters(context: Context): Map<SectionId, Chapter> {
   const line = new HorizonLine();
   const card = new BookCard();
-  const chapters = new Map<SectionId, Chapter>();
-  chapters.set('welcome', new WelcomeChapter(context, line));
-  chapters.set('ocean', new OceanChapter(context, line, card));
-  chapters.set('room', new RoomChapter(context));
-  chapters.set('hello', new HelloChapter(context));
-  chapters.set('horizon', new HorizonChapter(context));
+  const ocean = new OceanChapter(context, line, card);
   const stars = new StarsChapter(context);
-  chapters.set('stars', stars);
-  chapters.set('glass', new GlassChapter(context, stars));
-  chapters.set('identity', new IdentityChapter(context));
-  SECTIONS.forEach((spec, index) => {
-    if (!chapters.has(spec.id))
-      chapters.set(spec.id, new PlaceholderChapter(context, spec, index % 2 ? 0.05 : 0.9));
-  });
-  return chapters;
+  const chapters: Record<SectionId, Chapter> = {
+    welcome: new WelcomeChapter(context, line),
+    ocean,
+    room: new RoomChapter(context),
+    hello: new HelloChapter(context),
+    horizon: new HorizonChapter(context),
+    stars,
+    glass: new GlassChapter(context, stars),
+    identity: new IdentityChapter(context),
+    archive: new ArchiveChapter(context, ocean),
+    ending: new EndingChapter(context, line),
+  };
+  return new Map(Object.entries(chapters) as [SectionId, Chapter][]);
 }

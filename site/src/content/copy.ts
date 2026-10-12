@@ -147,31 +147,35 @@ export const ENDING_BEATS: BeatSpec[] = [
   {
     text: 'Most people live at the surface.\nIt is warm there.',
     start: 0.04,
-    end: 0.16,
+    end: 0.14,
     variant: 'lead',
-    place: 'sky',
   },
   {
     text: 'But everything worth finding\nis a little deeper.',
-    start: 0.18,
-    end: 0.3,
+    start: 0.16,
+    end: 0.27,
     variant: 'lead',
-    place: 'sky',
   },
-  { text: 'So follow your dreams.', start: 0.32, end: 0.44, variant: 'title', place: 'sky' },
+  { text: 'So follow your dreams.', start: 0.29, end: 0.39, variant: 'title' },
   {
     text: 'Then go deeper.\nInto reality. Into study. Into yourself.',
-    start: 0.46,
-    end: 0.6,
+    start: 0.41,
+    end: 0.53,
     variant: 'lead',
-    place: 'sky',
   },
-  { text: 'And if it ever feels like drowning,', start: 0.62, end: 0.74, variant: 'lead', place: 'sky' },
+  { text: 'And if it ever feels like drowning,', start: 0.64, end: 0.73, variant: 'lead', place: 'sky' },
   {
-    text: "you're only learning\nto breathe underwater.",
+    text: 'you’re only learning\nto breathe underwater.',
     start: 0.74,
-    end: 0.88,
+    end: 0.86,
     variant: 'title',
     place: 'sky',
   },
 ];
+
+export const ENDING_FINALE = {
+  signature: 'Brenno Leon de Souza Amaral',
+  action: 'Back to the surface ↑',
+  credits:
+    'Designed and built by Brenno Leon. Set in Impostor Pro. Skeleton and motion by Mixamo X Bot. Made in 2026, somewhere around 2:47 am.',
+} as const;

@@ -91,6 +91,10 @@ export class OceanChapter implements Chapter {
     }
   }
 
+  get bookMeshes(): THREE.Mesh[] {
+    return this.shoal?.books.map((book) => book.mesh) ?? [];
+  }
+
   private get booksInteractive(): boolean {
     return (
       this.active &&

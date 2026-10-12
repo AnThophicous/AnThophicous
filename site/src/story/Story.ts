@@ -77,6 +77,7 @@ export class Story {
 
   layout(): void {
     const vh = this.viewport.size.height;
+    const last = this.layouts[this.layouts.length - 1];
     let cursor = 0;
     let gated = false;
     for (const section of this.layouts) {
@@ -87,9 +88,8 @@ export class Story {
       if (spec.kind === 'pinned') {
         section.height = spec.length * vh;
         const closedGate = spec.gate && !this.openGates.has(spec.gate.id) ? spec.gate : null;
-        element.style.height = closedGate
-          ? `${section.height * closedGate.at + vh}px`
-          : `${section.height}px`;
+        const runway = closedGate ? section.height * closedGate.at : section.height;
+        element.style.height = `${runway + (closedGate || section === last ? vh : 0)}px`;
         gated = closedGate !== null;
       } else {
         section.height = element.offsetHeight;
