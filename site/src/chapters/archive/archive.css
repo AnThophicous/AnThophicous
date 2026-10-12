@@ -11,6 +11,22 @@
   margin-inline: auto;
 }
 
+.archive-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  background:
+    linear-gradient(#000 25%, transparent) top / 100% clamp(110px, 16vh, 160px) no-repeat,
+    linear-gradient(to top, #000 25%, transparent) bottom / 100% clamp(100px, 14vh, 140px) no-repeat;
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-out);
+}
+
+.archive-veil.is-visible {
+  opacity: 1;
+}
+
 .archive a {
   text-decoration: none;
 }

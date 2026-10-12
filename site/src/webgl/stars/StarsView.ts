@@ -62,6 +62,7 @@ export class StarsView implements View {
 
   resize(size: ViewportSize): void {
     this.camera.aspect = size.aspect;
+    this.camera.fov = size.isPortrait ? 80 : 55;
     this.camera.updateProjectionMatrix();
     this.dustScale.value = size.height / 15;
   }

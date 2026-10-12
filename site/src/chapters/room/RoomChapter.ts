@@ -163,7 +163,9 @@ export class RoomChapter implements Chapter {
     }
     const camera = this.view.camera;
     camera.position.copy(this.cameraPosition);
-    camera.fov = THREE.MathUtils.lerp(24, 34, blend) + pull * 4 - dive * 8;
+    const portrait = this.context.viewport.size.isPortrait ? 1.55 : 1;
+    camera.fov =
+      (THREE.MathUtils.lerp(24, 34, blend) + pull * 4 - dive * 8) * THREE.MathUtils.lerp(1, portrait, blend);
     camera.updateProjectionMatrix();
     camera.lookAt(this.cameraTarget);
     camera.updateMatrixWorld();

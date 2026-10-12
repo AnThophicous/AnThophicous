@@ -19,6 +19,7 @@ const BOOKS_FROM = 0.38;
 const BOOKS_UNTIL = 0.9;
 const RECYCLE_FROM = 0.42;
 const RECYCLE_UNTIL = 0.86;
+const ATLAS_SIZE = { low: 1024, medium: 1280, high: 1536 } as const;
 
 export class OceanChapter implements Chapter {
   readonly id = 'ocean' as const;
@@ -59,10 +60,7 @@ export class OceanChapter implements Chapter {
       ['400 1em "Impostor Pro"', '500 1em "Impostor Pro"'].map((face) => document.fonts.load(face)),
     );
     const { quality, renderer } = this.context;
-    this.shoal = new BookShoal(
-      quality.tier === 'low' ? 1024 : 2048,
-      renderer.gl.capabilities.getMaxAnisotropy(),
-    );
+    this.shoal = new BookShoal(ATLAS_SIZE[quality.tier], renderer.gl.capabilities.getMaxAnisotropy());
     this.shoal.grabbed.on(() => this.context.sound.cue('page'));
     this.shoal.released.on(() => this.context.sound.cue('bubbles', { gain: 0.4 }));
     this.shoal.opened.on((book) => {

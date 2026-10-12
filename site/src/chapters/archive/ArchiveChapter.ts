@@ -30,6 +30,7 @@ export class ArchiveChapter implements Chapter {
   readonly view: ArchiveView;
   private readonly root: HTMLElement;
   private readonly specimens: Specimen[] = [];
+  private readonly veil = document.createElement('div');
   private focusedBook = -1;
   private parallaxX = 0;
   private parallaxY = 0;
@@ -42,6 +43,9 @@ export class ArchiveChapter implements Chapter {
     this.view = new ArchiveView(context.quality);
     this.root = context.story.find('archive').element;
     renderArchive(this.root);
+    this.veil.className = 'archive-veil';
+    this.veil.setAttribute('aria-hidden', 'true');
+    document.body.append(this.veil);
     this.observeReveals();
     this.bindInteractions();
     this.view.resize(context.viewport.size);
@@ -62,10 +66,12 @@ export class ArchiveChapter implements Chapter {
 
   enter(): void {
     if (!this.view.hasBooks) this.view.adoptBooks(this.ocean.bookMeshes);
+    this.veil.classList.add('is-visible');
   }
 
   leave(): void {
     this.focusedBook = -1;
+    this.veil.classList.remove('is-visible');
   }
 
   update(progress: number, frame: Frame, output: ChapterOutput): void {

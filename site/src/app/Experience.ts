@@ -54,7 +54,13 @@ export class Experience {
       stage: query('.stage'),
     };
     this.chapters = createChapters(context);
-    this.director = new Director(this.chapters, this.renderer, this.hud, this.cursor);
+    this.director = new Director(
+      this.chapters,
+      this.renderer,
+      this.hud,
+      this.cursor,
+      this.viewport.prefersReducedMotion,
+    );
     this.frame = {
       time: 0,
       delta: 0,
