@@ -1,243 +1,82 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="AnThophicous — present day, present time" />
-</p>
-
-<p align="center">
-  <img src="assets/designer.gif" width="100%" alt="Mid-Level · Fullstack — Website Designer" />
+  <img src="assets/banner.svg" width="100%" alt="Brenno Leon de Souza Amaral — Front-end e Web Designer" />
 </p>
 
 <p align="center">
   <a href="https://github.com/AnThophicous">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&pause=1200&color=FF2E4D&center=true&vCenter=true&width=640&lines=present+day.+present+time.+hahahaha;sudo+apt+install+futuro;16+anos+%C2%B7+dev+brasileiro+%C2%B7+conectado+%C3%A0+wired;eu+n%C3%A3o+quero+s%C3%B3+estudar+programa%C3%A7%C3%A3o.;eu+quero+construir+coisas+que+impactem+pessoas." alt="typing" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=FF2E4D&center=true&vCenter=true&width=700&lines=Front-end+e+Web+Designer;Projeção+de+interfaces+com+Figcraft;Sites+feitos+para+competir+no+Awwwards;Motion+design+%C2%B7+edição+de+vídeo+%C2%B7+social+media" alt="Funções" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/idade-16-ff2e4d?style=flat-square&labelColor=0b0b10" />
-  <img src="https://img.shields.io/badge/local-Brasil-ff2e4d?style=flat-square&labelColor=0b0b10" />
-  <img src="https://img.shields.io/badge/status-connected_to_the_wired-ff2e4d?style=flat-square&labelColor=0b0b10" />
-  <img src="https://img.shields.io/badge/os-linux-ff2e4d?style=flat-square&logo=linux&logoColor=white&labelColor=0b0b10" />
-  <img src="https://komarev.com/ghpvc/?username=AnThophicous&color=ff2e4d&style=flat-square&label=pessoas+conectadas" />
+  <img src="https://img.shields.io/badge/idade-16-ff2e4d?style=flat-square&labelColor=07070b" />
+  <img src="https://img.shields.io/badge/base-Brasil-ff2e4d?style=flat-square&labelColor=07070b" />
+  <img src="https://img.shields.io/badge/programação-desde_os_10-ff2e4d?style=flat-square&labelColor=07070b" />
+  <img src="https://img.shields.io/badge/foco-web_design-ff2e4d?style=flat-square&labelColor=07070b" />
 </p>
 
-<p align="center"><img src="assets/wires.svg" width="100%" /></p>
+---
 
-## `LAYER:01` — WEIRD
+## Sobre
 
-<p align="center">
-  <img src="assets/neofetch-tux.svg" width="100%" alt="neofetch: anthophicous@wired" />
-</p>
+Sou **Brenno Leon de Souza Amaral**, designer gráfico e front-end, com foco em **web design** e **projeção de interfaces**. Programo desde os 10 anos e hoje crio sites, componentes e experiências visuais com atenção ao detalhe, ao movimento e à performance.
 
-> Opa! Eu sou o **AnThophicous** 👋 — um desenvolvedor brasileiro de **16 anos**, apaixonado por tecnologia, programação e Inteligência Artificial.
->
-> Hoje atuo mais no **Front-end**, mas estou expandindo pra **Backend com TypeScript**, desenvolvimento de sistemas e **Cyber Security**.
+Meu objetivo é construir sites que disputem prêmios de design, como o **Awwwards**, unindo estética refinada com código limpo.
 
-<p align="center"><b><i>☕ Desenvolvedor que não gosta de café é apenas um garoto perdido.</i></b></p>
+Também atuo em **motion design**, **edição de vídeo** e **social media**, o que me dá uma visão completa do ciclo de uma peça: da ideia visual até a entrega no código ou na tela.
 
-| | |
+## Áreas de atuação
+
+| Área | O que faço |
 |---|---|
-| 🎵 **Música favorita** | Construção — Chico Buarque |
-| 🕗 **Horário preferido para codar** | 19:50 |
-| 🖤 **Preza por** | Melancolia Extrema, Paz Interna, Vibe, Amigos, Pessoas e Código |
+| 🎨 **Web Design** | Direção de arte, layouts, sistemas visuais e sites de alto nível estético |
+| 🧩 **Front-end** | Interfaces responsivas, animações, componentes e interações em HTML, CSS e JavaScript/TypeScript |
+| 🎞️ **Motion Design** | Microinterações, transições e animações para web e vídeo |
+| 🎬 **Edição de vídeo** | Edição, ritmo e finalização para redes sociais |
+| 📱 **Social Media** | Conteúdo visual pensado para plataformas e formatos verticais |
+| 🖥️ **Projeção de interfaces** | Protótipos e interfaces desenhados no Figma e no Figcraft, prontos para implementação |
 
-<p align="center"><img src="assets/wires.svg" width="100%" /></p>
-
-## `LAYER:07` — SOCIETY
-
-<table>
-<tr>
-<td width="50%" align="center">
-  <img src="assets/lain.gif" width="100%" alt="Lain Iwakura em 1-bit com dithering" />
-</td>
-<td width="50%">
-
-```text
-   ┌────────────────────────────────────┐
-   │  SERIAL EXPERIMENTS LAIN  (1998)   │
-   └────────────────────────────────────┘
-
-   > present day.
-   > present time.
-   > HAHAHAHAHA
-
-   "no matter where you go,
-    everyone's connected."
-
-   o mundo real e a Wired
-   não são tão separados
-   quanto parecem.
-
-   é por isso que eu programo.
-```
-
-<sub><code>lain_dither.py</code> → dithering Atkinson 1-bit · luz em movimento · sombra projetada · glitch · desligamento de CRT</sub>
-
-</td>
-</tr>
-</table>
-
-<p align="center"><img src="assets/wires.svg" width="100%" /></p>
-
-## `LAYER:03` — PSYCHE
-
-<details>
-<summary><code>$ cat ~/minha_historia.txt</code> &nbsp;<sub>(clica pra abrir)</sub></summary>
-<br/>
-
-Provavelmente você chegou aqui pelos meus projetos… ou talvez queira me conhecer melhor. Então deixa eu te contar.
-
-```diff
-@@ ~10 anos @@
-+ jogos de navegador: MooMoo.io, Zombs.io e outros .io
-+ ficava fascinado tentando entender como aqueles jogos funcionavam
-+ mesmo sem saber programar direito, já queria criar algo parecido
-
-@@ 12 anos @@
-- me afastei um pouco da programação
-
-@@ 13 anos @@
-+ voltei de verdade: HTML, CSS, JavaScript, TypeScript
-+ servidores, backend, APIs e sistemas
-+ conheci a fundo as Inteligências Artificiais (GPT-4o mudou tudo)
-
-@@ hoje — 16 anos @@
-+ duas paixões: programação + inteligência artificial
-+ projetos reais, errar, corrigir e aprender na prática
-```
-
-Também estudei **Engenharia de Prompt**, incluindo o método **T.I.C.**:
-
-| `T` | `I` | `C` |
-|:---:|:---:|:---:|
-| **Task** | **Instructions** | **Context** |
-
-Esse método me ajudou a pensar melhor, organizar ideias e criar prompts mais eficientes.
-
-Eu nunca gostei de apenas assistir aulas e guardar conhecimento. **Eu gosto de aplicar.** Mesmo ainda sem experiência profissional em empresas, estou construindo uma base forte com estudo, prática e projetos próprios.
-
-Além da parte técnica, venho aprendendo bastante sobre maturidade, disciplina e crescimento pessoal — foco, respeito, espaço pessoal e evolução como pessoa. Usei tudo isso como motivação pra voltar ainda mais forte.
-
-</details>
-
-<p align="center"><img src="assets/wires.svg" width="100%" /></p>
-
-## `LAYER:04` — RELIGION
-
-<p align="center">
-  <img src="assets/creation.svg" width="100%" alt="A Criação de Adão em ASCII: as mãos de Deus e de Adão quase se tocando" />
-</p>
-
-<p align="center"><sub>a obra de Michelangelo convertida em ASCII a partir do próprio afresco · os dedos se aproximam, mas nunca se tocam</sub></p>
-
-<p align="center"><img src="assets/wires.svg" width="100%" /></p>
-
-## `LAYER:09` — PROTOCOL
-
-```console
-anthophicous@wired:~$ apt list --installed
-```
+## Stack
 
 <p>
+  <img src="https://img.shields.io/badge/TypeScript-0b0b10?style=for-the-badge&logo=typescript&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/JavaScript-0b0b10?style=for-the-badge&logo=javascript&logoColor=ff2e4d" />
   <img src="https://img.shields.io/badge/HTML5-0b0b10?style=for-the-badge&logo=html5&logoColor=ff2e4d" />
   <img src="https://img.shields.io/badge/CSS3-0b0b10?style=for-the-badge&logo=css3&logoColor=ff2e4d" />
-  <img src="https://img.shields.io/badge/JavaScript-0b0b10?style=for-the-badge&logo=javascript&logoColor=ff2e4d" />
-  <img src="https://img.shields.io/badge/TypeScript-0b0b10?style=for-the-badge&logo=typescript&logoColor=ff2e4d" />
   <img src="https://img.shields.io/badge/Node.js-0b0b10?style=for-the-badge&logo=nodedotjs&logoColor=ff2e4d" />
-  <img src="https://img.shields.io/badge/C++-0b0b10?style=for-the-badge&logo=cplusplus&logoColor=ff2e4d" />
-  <img src="https://img.shields.io/badge/C%23-0b0b10?style=for-the-badge&logo=csharp&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/Rust-0b0b10?style=for-the-badge&logo=rust&logoColor=ff2e4d" />
+  <img src="https://img.shields.io/badge/Figma-0b0b10?style=for-the-badge&logo=figma&logoColor=ff2e4d" />
 </p>
 
-```console
-anthophicous@wired:~$ apt install --future
-```
+- **Front-end:** HTML, CSS, JavaScript e TypeScript, com foco em animação e interfaces expressivas
+- **Sistemas:** Node.js e Rust, com noções básicas de segurança da informação
+- **Design:** Figma, Figcraft e direção de arte para web
+- **Vídeo e movimento:** edição, motion design e produção para redes sociais
 
-<p>
-  <img src="https://img.shields.io/badge/Rust-installing...-1d1d27?style=for-the-badge&logo=rust&logoColor=white" />
-  <img src="https://img.shields.io/badge/Backend_avançado-installing...-1d1d27?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cyber_Security-installing...-1d1d27?style=for-the-badge&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-installing...-1d1d27?style=for-the-badge&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/IA-installing...-1d1d27?style=for-the-badge&logo=anthropic&logoColor=white" />
-  <img src="https://img.shields.io/badge/Arquitetura_de_software-installing...-1d1d27?style=for-the-badge&logoColor=white" />
-</p>
+## Projetos em destaque
 
-<p align="center"><img src="assets/wires.svg" width="100%" /></p>
-
-## `LAYER:11` — INFORNOGRAPHY
-
-<p align="center">
-  <img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AnThophicous&theme=github_dark" />
-</p>
-
-<p align="center">
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AnThophicous&theme=github_dark" />
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnThophicous&theme=github_dark" />
-</p>
-
-<p align="center">
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnThophicous&theme=github_dark" />
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AnThophicous&theme=github_dark&utcOffset=-3" />
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AnThophicous/AnThophicous/output/snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AnThophicous/AnThophicous/output/snake-light.svg" />
-    <img alt="cobrinha comendo minhas contribuições" src="https://raw.githubusercontent.com/AnThophicous/AnThophicous/output/snake-dark.svg" />
-  </picture>
-</p>
-
-<p align="center"><img src="assets/wires.svg" width="100%" /></p>
-
-## `LAYER:13` — EGO
-
-```console
-anthophicous@wired:~$ cat /etc/objetivos
-```
-
-| | |
+| Projeto | Descrição |
 |---|---|
-| 🎯 **onde quero chegar** | Google · Microsoft · OpenAI · Anthropic · Big Techs do Vale do Silício |
-| 🧠 **o que importa mais** | construir coisas incríveis, aprender sempre e deixar minha marca na tecnologia |
-| ⚡ **foco de hoje** | **aprender, construir e evoluir.** |
+| [**Portfólio**](https://github.com/AnThophicous/AnThophicous.github.io) | Site pessoal de design e front-end |
+| [**LuxoBrowser**](https://github.com/AnThophicous/luxo-browser) | Fork experimental do Firefox 159 com foco em interface limpa, dinâmica e leve |
+| [**FitaSign**](https://github.com/AnThophicous/FitaSign) | Editor desktop open-source de interfaces Roblox (TypeScript, Electron, Luau e MCP) |
+| [**parede-da-ia**](https://github.com/AnThophicous/parede-da-ia) | Motor de direção de arte que dá a agentes de IA o padrão de design de sites premiados |
+| [**Slate**](https://github.com/AnThophicous/Slate) | Toolkit de interface de terminal em Rust, com suporte a Node.js e TypeScript |
+| [**Cobault-Backend**](https://github.com/AnThophicous/Cobault-Backend) | Baixador de mídia em C com HTTP paralelo e suporte a HLS |
 
-<details>
-<summary><code>$ cat ~/curiosidades</code></summary>
-<br/>
-
-- 🇧🇷 Brasileiro, 16 anos
-- 💻 Desenvolvedor Front-end
-- 🚀 Aprendendo Backend com TypeScript
-- 🤖 Apaixonado por Inteligência Artificial
-- 🔒 Interessado em Cyber Security
-- 🐧 Fã de Linux e de Serial Experiments Lain
-- 📚 Sempre estudando e criando projetos
-- 🗣️ Consigo conversar um pouco em inglês
-- ⚡ Gosto de transformar ideias em projetos reais
-
-</details>
-
-```console
-anthophicous@wired:~$ fortune | cowsay -f tux
-```
-
-```text
- _________________________________________________
-/ Eu não quero apenas estudar programação.        \
-\ Eu quero construir coisas que impactem pessoas. /
- -------------------------------------------------
-   \
-    \
-        .--.
-       |o_o |
-       |:_/ |
-      //   \ \
-     (|     | )
-    /'\_   _/`\
-    \___)=(___/
-```
+## Estatísticas
 
 <p align="center">
-  <img src="assets/footer.svg" width="100%" alt="close the world, open the next" />
+  <img height="170" alt="Estatísticas do GitHub" src="https://github-readme-stats.vercel.app/api?username=AnThophicous&show_icons=true&theme=transparent&title_color=ff2e4d&icon_color=ff2e4d&text_color=d8d8e6&hide_border=true" />
+  <img height="170" alt="Linguagens mais usadas" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnThophicous&layout=compact&langs_count=6&theme=transparent&title_color=ff2e4d&text_color=d8d8e6&hide_border=true" />
 </p>
 
-<p align="center"><sub>tudo aqui (ASCII, SVGs animados, a Lain em dithering) é gerado por código em <a href="scripts/"><code>scripts/</code></a> 🐧</sub></p>
+<p align="center">
+  <img src="https://github.com/AnThophicous/AnThophicous/raw/output/snake-dark.svg" alt="Gráfico de contribuições" />
+</p>
+
+---
+
+## Contato
+
+Quer conversar sobre um projeto ou uma parceria? Veja meu [portfólio](https://github.com/AnThophicous/AnThophicous.github.io) ou abra uma issue em qualquer um dos repositórios.
