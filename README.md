@@ -23,7 +23,7 @@ Sou **Brenno Leon de Souza Amaral**, designer gráfico e front-end com foco em *
 
 Meu objetivo é criar sites que disputem prêmios de design, como o **Awwwards**, unindo estética refinada e código limpo, e manter tudo isso rodando de forma automatizada.
 
-Também faço **motion design** e **edição de vídeo** pelo celular, usando o **Alight Motion**, e produzo conteúdo para **social media**.
+Faço **motion design** em duas frentes: animações em vídeo, editadas pelo celular no **Alight Motion**, e motion digital feito direto na web, com CSS e JavaScript. Também faço **edição de vídeo** e produzo conteúdo para **social media**.
 
 ## Áreas de atuação
 
@@ -33,7 +33,7 @@ Também faço **motion design** e **edição de vídeo** pelo celular, usando o 
 | 🧩 **Front-end** | Interfaces responsivas, animações e componentes em HTML, CSS, JavaScript e TypeScript |
 | 🖥️ **Projeção de interfaces** | Protótipos no Figma e no Figcraft, prontos para implementação |
 | ⚙️ **DevOps** | Automação com CI/CD, deploy, Linux e infraestrutura de servidores |
-| 🎞️ **Motion Design** | Microinterações e animações para web, com edição feita no Alight Motion |
+| 🎞️ **Motion Design** | Animações em vídeo (edição no Alight Motion) e motion digital feito direto na web, com CSS e JavaScript |
 | 🎬 **Edição de vídeo** | Edição, ritmo e finalização para redes sociais |
 
 ## Stack
@@ -55,7 +55,7 @@ Também faço **motion design** e **edição de vídeo** pelo celular, usando o 
 - **Back-end e sistemas:** Node.js e Rust, com noções básicas de segurança da informação
 - **DevOps:** Linux, Docker, GitHub Actions e automação de deploy em servidores (VPS)
 - **Design:** Figma, Figcraft e direção de arte para web
-- **Motion e vídeo:** Alight Motion para motion design e edição de vídeo para redes sociais
+- **Motion:** animações web em CSS e JavaScript, e motion em vídeo com Alight Motion para redes sociais
 
 ## DevOps
 
